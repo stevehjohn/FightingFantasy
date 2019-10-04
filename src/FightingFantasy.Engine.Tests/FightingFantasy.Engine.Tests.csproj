@@ -15,4 +15,10 @@
     <ProjectReference Include="..\FightingFantasy.Engine\FightingFantasy.Engine.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestFiles\Map.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace FightingFantasy.Engine.Models
 {
@@ -8,6 +10,9 @@ namespace FightingFantasy.Engine.Models
 
         public void LoadMap(string path)
         {
+            var json = File.ReadAllText(path);
+
+            Map = JsonConvert.DeserializeObject<Dictionary<int, Location>>(json);
         }
     }
 }
