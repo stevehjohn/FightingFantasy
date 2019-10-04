@@ -6,7 +6,9 @@ namespace FightingFantasy.Engine.Core
     {
         public static FightingFantasy Create()
         {
-            var container = ContainerManager.InitialiseContainer();
+            var containerManager = new ContainerManager();
+
+            var container = containerManager.InitialiseContainer();
 
             return container.GetInstance<FightingFantasy>();
         }

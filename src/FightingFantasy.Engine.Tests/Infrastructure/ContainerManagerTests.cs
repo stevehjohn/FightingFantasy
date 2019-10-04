@@ -9,7 +9,9 @@ namespace FightingFantasy.Engine.Tests.Infrastructure
         [Test]
         public void Container_can_initialise_all_objects()
         {
-            var container = ContainerManager.InitialiseContainer();
+            var containerManager = new ContainerManager();
+
+            var container = containerManager.InitialiseContainer();
 
             Assert.DoesNotThrow(() => container.Verify());
         }

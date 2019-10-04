@@ -4,16 +4,16 @@ using SimpleInjector;
 
 namespace FightingFantasy.Engine.Infrastructure
 {
-    public static class ContainerManager
+    public class ContainerManager
     {
-        public static Container Container { get; }
+        public Container Container { get; }
 
-        static ContainerManager()
+        public ContainerManager()
         {
             Container = new Container();
         }
 
-        public static Container InitialiseContainer()
+        public Container InitialiseContainer()
         {
             Container.RegisterSingleton<IDie, Die>();
 
