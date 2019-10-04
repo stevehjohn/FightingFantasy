@@ -1,0 +1,32 @@
+{
+  "Map": {
+    "3": {
+      "Id": 1,
+      "Description": "You swim strongly up and away from the stadium, through the crack in the dome and over the city once more. Not far away, you see the patch of clean sand that you observe earlier. You can now see that a small object of some kind is in the middle of the sand.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 196
+        }
+      ]
+    },
+    "2": {
+      "Id": 2,
+      "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
+      "Choices": [
+        {
+          "Description": "Run away.",
+          "Id": 10
+        },
+        {
+          "Description": "Listen to the voice.",
+          "Id": 321
+        },
+        {
+          "Description": "Attack.",
+          "Id": 26
+        }
+      ]
+    }
+  }
+}
