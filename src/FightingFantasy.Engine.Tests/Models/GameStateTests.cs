@@ -49,5 +49,11 @@ namespace FightingFantasy.Engine.Tests.Models
             Assert.That(location.Choices[2].Description, Is.EqualTo("Attack."));
             Assert.That(location.Choices[2].Id, Is.EqualTo(26));
         }
+
+        [Test]
+        public void GameState_exposes_protagonist()
+        {
+            Assert.NotNull(_gameState.Protagonist);
+        }
     }
 }
