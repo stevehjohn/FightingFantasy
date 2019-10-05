@@ -4,11 +4,11 @@ namespace FightingFantasy.Engine.Core
 {
     public class FightingFantasy
     {
-        private readonly Protagonist _protagonist;
+        private readonly GameState _gameState;
 
-        public FightingFantasy(Protagonist protagonist)
+        public FightingFantasy(GameState gameState)
         {
-            _protagonist = protagonist;
+            _gameState = gameState;
         }
     }
 }

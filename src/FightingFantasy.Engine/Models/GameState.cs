@@ -8,6 +8,13 @@ namespace FightingFantasy.Engine.Models
     {
         public Dictionary<int, Location> Map { get; private set; }
 
+        public Protagonist Protagonist { get; }
+
+        public GameState(Protagonist protagonist)
+        {
+            Protagonist = protagonist;
+        }
+
         public void LoadMap(string path)
         {
             var json = File.ReadAllText(path);

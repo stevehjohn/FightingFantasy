@@ -1,4 +1,6 @@
-﻿using FightingFantasy.Engine.Models;
+﻿using FightingFantasy.Engine.Core;
+using FightingFantasy.Engine.Models;
+using Moq;
 using NUnit.Framework;
 
 namespace FightingFantasy.Engine.Tests.Models
@@ -11,7 +13,9 @@ namespace FightingFantasy.Engine.Tests.Models
         [SetUp]
         public void SetUp()
         {
-            _gameState = new GameState();
+            var protagonist = new Protagonist(new Die());
+
+            _gameState = new GameState(protagonist);
         }
 
         [Test]
