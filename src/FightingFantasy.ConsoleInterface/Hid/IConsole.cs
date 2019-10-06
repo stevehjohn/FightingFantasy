@@ -10,6 +10,10 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         void Write(char character);
 
+        void Write(string text);
+
         void Clear();
+
+        string ReadLine();
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IInput
     {
-        string Read();
+        string ReadLine();
     }
 }

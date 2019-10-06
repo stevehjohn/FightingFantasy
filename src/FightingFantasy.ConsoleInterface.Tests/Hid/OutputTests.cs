@@ -23,6 +23,14 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
         }
 
         [Test]
+        public void Write_hides_the_cursor()
+        {
+            _output.Write("This is plain text.");
+
+            _console.VerifySet(c => c.CursorVisible = false);
+        }
+
+        [Test]
         public void Write_sets_default_colour_without_markup()
         {
             _output.Write("This is plain text.");

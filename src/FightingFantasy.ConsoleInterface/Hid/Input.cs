@@ -1,4 +1,4 @@
-﻿using System;
+﻿using FightingFantasy.ConsoleInterface.Infrastructure;
 
 namespace FightingFantasy.ConsoleInterface.Hid
 {
@@ -11,9 +11,17 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _console = console;
         }
 
-        public string Read()
+        public string ReadLine()
         {
-            throw new NotImplementedException();
+            _console.CursorVisible = true;
+
+            _console.ForegroundColour = AppSettings.Instance.ColourScheme.Prompt;
+
+            _console.Write("> ");
+
+            _console.ForegroundColour = AppSettings.Instance.ColourScheme.UserInput;
+
+            return _console.ReadLine();
         }
     }
 }

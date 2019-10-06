@@ -21,9 +21,19 @@ namespace FightingFantasy.ConsoleInterface.Hid
             System.Console.Write(character);
         }
 
+        public void Write(string text)
+        {
+            System.Console.Write(text);
+        }
+
         public void Clear()
         {
             System.Console.Clear();
+        }
+
+        public string ReadLine()
+        {
+            return System.Console.ReadLine();
         }
     }
 }
