@@ -66,6 +66,12 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             break;
                         case "br":
                             _console.Write("\n\n");
+
+                            while (i + 1 < text.Length && text[i + 1] == ' ')
+                            {
+                                i++;
+                            }
+
                             continue;
                         default:
                             colour = AppSettings.Instance.ColourScheme.Normal;
