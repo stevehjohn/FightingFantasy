@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using FightingFantasy.Engine.Models;
 using Newtonsoft.Json;
 
@@ -11,10 +10,14 @@ namespace FightingFantasy.ConsoleInterface.Hid
         private readonly IOutput _output;
         private readonly IInput _input;
 
+        private State _state;
+
         public ConsoleUi(IOutput output, IInput input)
         {
             _output = output;
             _input = input;
+
+            _state = State.Started;
         }
 
         public void Run()
@@ -34,11 +37,21 @@ namespace FightingFantasy.ConsoleInterface.Hid
                     continue;
                 }
 
+                if (int.TryParse(input, out var index))
+                {
+                    switch (_state)
+                    {
+                        case State.SelectingGame:
+                            StartGame(index);
+                            continue;
+                    }
+                }
+
                 switch (input)
                 {
                     case "new":
                     case "start":
-                        StartGame();
+                        ListGames();
                         break;
                     case "help":
                         ShowHelpText();
@@ -73,11 +86,11 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _output.Write("\n");
         }
 
-        private void StartGame()
+        private void ListGames()
         {
-            _output.Write("\nPlease enter the number the game you'd like to start:\n\n");
+            _output.Write("\nPlease enter the number of the game you'd like to start:\n\n");
 
-            var files = Directory.EnumerateFiles(".\\Games").ToList();
+            var files = Directory.EnumerateFiles(".\\Games").OrderBy(s => s).ToList();
 
             var count = 0;
 
@@ -93,6 +106,22 @@ namespace FightingFantasy.ConsoleInterface.Hid
             }
 
             _output.Write("\n");
+
+            _state = State.SelectingGame;
+        }
+
+        private void StartGame(int index)
+        {
+            var files = Directory.EnumerateFiles(".\\Games").OrderBy(s => s).ToList();
+
+            if (index < 1 || index > files.Count)
+            {
+                _output.Write("\nNot a valid game id. Type <b>New</b> again to see a list of games available.\n\n");
+
+                return;
+            }
+
+            _state = State.Playing;
         }
     }
 }
