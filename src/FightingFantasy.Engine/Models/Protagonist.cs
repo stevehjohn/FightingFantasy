@@ -4,11 +4,15 @@ namespace FightingFantasy.Engine.Models
 {
     public class Protagonist
     {
-        public ProtagonistAttribute Skill { get; }
+        public ProtagonistAttribute Skill { get; set; }
 
-        public ProtagonistAttribute Stamina { get; }
+        public ProtagonistAttribute Stamina { get; set; }
 
-        public ProtagonistAttribute Luck { get; }
+        public ProtagonistAttribute Luck { get; set; }
+
+        public Protagonist()
+        {
+        }
 
         public Protagonist(IDie die)
         {

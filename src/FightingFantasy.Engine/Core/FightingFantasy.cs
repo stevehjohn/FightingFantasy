@@ -4,11 +4,11 @@ namespace FightingFantasy.Engine.Core
 {
     public class FightingFantasy
     {
-        private readonly GameState _gameState;
+        private GameState _gameState;
 
-        public FightingFantasy(GameState gameState)
+        public void LoadGame(string path)
         {
-            _gameState = gameState;
+            _gameState = GameState.LoadGame(path);
         }
     }
 }

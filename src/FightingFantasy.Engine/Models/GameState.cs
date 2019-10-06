@@ -8,20 +8,17 @@ namespace FightingFantasy.Engine.Models
     {
         public string Title { get; set; }
 
-        public Dictionary<int, Location> Map { get; private set; }
+        public Dictionary<int, Location> Map { get; set; }
 
-        public Protagonist Protagonist { get; }
+        public Protagonist Protagonist { get; set; }
 
-        public GameState(Protagonist protagonist)
-        {
-            Protagonist = protagonist;
-        }
+        public bool IsSavedGame = false;
 
-        public void LoadMap(string path)
+        public static GameState LoadGame(string path)
         {
             var json = File.ReadAllText(path);
 
-            Map = JsonConvert.DeserializeObject<Dictionary<int, Location>>(json);
+            return JsonConvert.DeserializeObject<GameState>(json);
         }
     }
 }

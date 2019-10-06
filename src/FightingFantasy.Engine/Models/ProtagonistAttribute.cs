@@ -4,21 +4,21 @@ namespace FightingFantasy.Engine.Models
 {
     public class ProtagonistAttribute
     {
-        private readonly List<int> _history;
+        public List<int> History { get; set; }
 
-        public int HistoryLength => _history.Count;
+        public int HistoryLength => History.Count;
 
-        public int InitialValue => _history[0];
+        public int InitialValue => History[0];
 
         public int Value
         {
-            get => _history[_history.Count - 1];
-            set => _history.Add(value);
+            get => History[History.Count - 1];
+            set => History.Add(value);
         }
 
         public ProtagonistAttribute()
         {
-            _history = new List<int>();
+            History = new List<int>();
         }
     }
 }

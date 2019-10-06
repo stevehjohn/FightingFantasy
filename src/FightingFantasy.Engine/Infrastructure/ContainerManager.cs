@@ -17,7 +17,7 @@ namespace FightingFantasy.Engine.Infrastructure
         {
             Container.RegisterSingleton<IDie, Die>();
 
-            Container.RegisterSingleton<Protagonist>();
+            //Container.RegisterSingleton<Protagonist>();
             Container.RegisterSingleton<GameState>();
 
             Container.RegisterSingleton<Core.FightingFantasy>();

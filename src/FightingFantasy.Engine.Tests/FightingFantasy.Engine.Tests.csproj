@@ -16,7 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="TestFiles\Map.json">
+    <None Update="TestFiles\SavedGame.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\GameState.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
