@@ -76,9 +76,12 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                 _console.Write(text[i]);
 
-                _sleeper.Sleep(text[i] == '\n'
-                                   ? AppSettings.Instance.LineBreakDelay
-                                   : AppSettings.Instance.TextDelay);
+                if (! _console.KeyAvailable)
+                {
+                    _sleeper.Sleep(text[i] == '\n'
+                                       ? AppSettings.Instance.LineBreakDelay
+                                       : AppSettings.Instance.TextDelay);
+                }
             }
         }
 

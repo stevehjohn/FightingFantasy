@@ -16,6 +16,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
             set => System.Console.CursorVisible = value;
         }
 
+        public bool KeyAvailable => System.Console.KeyAvailable;
+
         public void Write(char character)
         {
             System.Console.Write(character);

@@ -8,6 +8,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         bool CursorVisible { set; }
 
+        bool KeyAvailable { get; }
+
         void Write(char character);
 
         void Write(string text);
