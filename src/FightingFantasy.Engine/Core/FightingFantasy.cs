@@ -8,6 +8,8 @@ namespace FightingFantasy.Engine.Core
 
         internal GameState GameState;
 
+        public string Title => GameState.Title;
+
         public FightingFantasy(IDie die)
         {
             _die = die;

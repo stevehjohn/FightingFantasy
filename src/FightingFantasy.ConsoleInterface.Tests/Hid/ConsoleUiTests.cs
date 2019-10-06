@@ -80,5 +80,41 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
 
             _output.Verify(o => o.Clear());
         }
+
+        [Test]
+        public void ListGames_enumerates_game_files()
+        {
+            _input.SetupSequence(i => i.ReadLine())
+                  .Returns("New")
+                  .Returns("Exit");
+
+            _consoleUi.Run();
+
+            _output.Verify(o => o.Write("  <b>1</b> - <u>Demons of the Deep</u>.\n"));
+            _output.Verify(o => o.Write("  <b>2</b> - <u>Robot Commando</u>.\n"));
+        }
+
+        [TestCase(0, false, null)]
+        [TestCase(1, true, "Demons of the Deep")]
+        [TestCase(2, true, "Robot Commando")]
+        [TestCase(3, false, null)]
+        public void StartGame_checks_for_valid_index(int index, bool isValid, string title)
+        {
+            _input.SetupSequence(i => i.ReadLine())
+                  .Returns("New")
+                  .Returns(index.ToString())
+                  .Returns("Exit");
+
+            _consoleUi.Run();
+
+            if (isValid)
+            {
+                _output.Verify(o => o.Write($"<u>{title}</u>\n\n"));
+            }
+            else
+            {
+                _output.Verify(o => o.Write("\nNot a valid game id. Type <b>New</b> again to see a list of games available.\n\n"));
+            }
+        }
     }
 }

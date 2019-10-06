@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
+using FightingFantasy.Engine.Core;
 using FightingFantasy.Engine.Models;
 using Newtonsoft.Json;
 
@@ -9,6 +10,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
     {
         private readonly IOutput _output;
         private readonly IInput _input;
+        private readonly Engine.Core.FightingFantasy _engine;
 
         private State _state;
 
@@ -18,6 +20,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _input = input;
 
             _state = State.Started;
+
+            _engine = FightingFantasyFactory.Create();
         }
 
         public void Run()
@@ -120,6 +124,12 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                 return;
             }
+
+            _output.Clear();
+
+            _engine.LoadGame(files[index - 1]);
+
+            _output.Write($"<u>{_engine.Title}</u>\n\n");
 
             _state = State.Playing;
         }
