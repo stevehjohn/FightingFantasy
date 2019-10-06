@@ -26,8 +26,8 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
         {
             _consoleUi.Run();
 
-            _output.Verify(o => o.Write("\nWelcome to Stevö John's Fighting Fantasy Game Engine!\n\n"));
-            _output.Verify(o => o.Write("Type help at any time for commands.\n\n"));
+            _output.Verify(o => o.Write("\nWelcome to Stevö John's <b>Fighting Fantasy</b> Game Engine!\n\n"));
+            _output.Verify(o => o.Write("Type <b>help</b> at any time for commands.\n\n"));
         }
     }
 }

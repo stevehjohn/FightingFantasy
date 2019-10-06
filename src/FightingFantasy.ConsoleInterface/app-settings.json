@@ -1,0 +1,12 @@
+{
+  "ColourScheme": {
+    "Normal": "Gray",
+    "Bold": "Blue",
+    "Italic": "Blue",
+    "Underline": "Blue",
+    "Caps": "Blue",
+    "Prompt": "Yellow" 
+  },
+  "TextDelay": 20,
+  "LineBreakDelay": 250 
+}
