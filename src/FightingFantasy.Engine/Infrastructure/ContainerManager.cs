@@ -1,5 +1,4 @@
 ﻿using FightingFantasy.Engine.Core;
-using FightingFantasy.Engine.Models;
 using SimpleInjector;
 
 namespace FightingFantasy.Engine.Infrastructure
@@ -16,9 +15,6 @@ namespace FightingFantasy.Engine.Infrastructure
         public Container InitialiseContainer()
         {
             Container.RegisterSingleton<IDie, Die>();
-
-            //Container.RegisterSingleton<Protagonist>();
-            Container.RegisterSingleton<GameState>();
 
             Container.RegisterSingleton<Core.FightingFantasy>();
 

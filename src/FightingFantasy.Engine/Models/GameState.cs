@@ -14,6 +14,7 @@ namespace FightingFantasy.Engine.Models
 
         public bool IsSavedGame = false;
 
+
         public static GameState LoadGame(string path)
         {
             var json = File.ReadAllText(path);
