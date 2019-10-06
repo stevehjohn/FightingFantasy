@@ -12,6 +12,8 @@ namespace FightingFantasy.Engine.Tests.Models
             var protagonist = new Protagonist();
 
             Assert.That(protagonist.Skill, Is.Not.Null);
+            Assert.That(protagonist.Stamina, Is.Not.Null);
+            Assert.That(protagonist.Luck, Is.Not.Null);
         }
     }
 }
