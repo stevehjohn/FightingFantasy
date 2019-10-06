@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using System.Threading;
 using FightingFantasy.ConsoleInterface.Infrastructure;
 
 namespace FightingFantasy.ConsoleInterface.Hid
@@ -8,10 +7,12 @@ namespace FightingFantasy.ConsoleInterface.Hid
     public class Output : IOutput
     {
         private readonly IConsole _console;
+        private readonly ISleeper _sleeper;
 
-        public Output(IConsole console)
+        public Output(IConsole console, ISleeper sleeper)
         {
             _console = console;
+            _sleeper = sleeper;
         }
 
         public void Write(string text)
@@ -75,9 +76,9 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                 _console.Write(text[i]);
 
-                Thread.Sleep(text[i] == '\n' 
-                                 ? AppSettings.Instance.LineBreakDelay 
-                                 : AppSettings.Instance.TextDelay);
+                _sleeper.Sleep(text[i] == '\n'
+                                   ? AppSettings.Instance.LineBreakDelay
+                                   : AppSettings.Instance.TextDelay);
             }
         }
 

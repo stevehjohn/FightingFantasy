@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace FightingFantasy.ConsoleInterface.Hid
 {
+    [ExcludeFromCodeCoverage]
     public class Console : IConsole
     {
         public ConsoleColor ForegroundColour

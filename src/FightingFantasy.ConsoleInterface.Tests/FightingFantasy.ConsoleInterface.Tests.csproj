@@ -15,4 +15,10 @@
     <ProjectReference Include="..\FightingFantasy.ConsoleInterface\FightingFantasy.ConsoleInterface.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="app-settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

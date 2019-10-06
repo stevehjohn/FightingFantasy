@@ -10,7 +10,7 @@ namespace FightingFantasy.ConsoleInterface.Infrastructure
         {
             var console = new Console();
 
-            var ui = new ConsoleUi(new Output(console), new Input());
+            var ui = new ConsoleUi(new Output(console, new Sleeper()), new Input(console));
 
             ui.Run();
         }
