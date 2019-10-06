@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FightingFantasy.Engine\FightingFantasy.Engine.csproj" />
+  </ItemGroup>
+
 </Project>

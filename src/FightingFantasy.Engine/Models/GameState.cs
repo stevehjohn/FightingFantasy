@@ -6,6 +6,8 @@ namespace FightingFantasy.Engine.Models
 {
     public class GameState
     {
+        public string Title { get; set; }
+
         public Dictionary<int, Location> Map { get; private set; }
 
         public Protagonist Protagonist { get; }

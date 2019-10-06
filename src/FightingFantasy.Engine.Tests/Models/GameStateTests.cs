@@ -1,6 +1,5 @@
 ﻿using FightingFantasy.Engine.Core;
 using FightingFantasy.Engine.Models;
-using Moq;
 using NUnit.Framework;
 
 namespace FightingFantasy.Engine.Tests.Models
