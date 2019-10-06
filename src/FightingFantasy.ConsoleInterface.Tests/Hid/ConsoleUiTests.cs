@@ -8,6 +8,7 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
     public class ConsoleUiTests
     {
         private Mock<IOutput> _output;
+        private Mock<IInput> _input;
 
         private ConsoleUi _consoleUi;
 
@@ -15,8 +16,9 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
         public void SetUp()
         {
             _output = new Mock<IOutput>();
+            _input = new Mock<IInput>();
 
-            _consoleUi = new ConsoleUi(_output.Object);
+            _consoleUi = new ConsoleUi(_output.Object, _input.Object);
         }
 
         [Test]
@@ -24,7 +26,7 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
         {
             _consoleUi.Run();
 
-            _output.Verify(o => o.Write("Welcome to Stevö John's Fighting Fantasy Game Engine!\n\n"));
+            _output.Verify(o => o.Write("\nWelcome to Stevö John's Fighting Fantasy Game Engine!\n\n"));
             _output.Verify(o => o.Write("Type help at any time for commands.\n\n"));
         }
     }
