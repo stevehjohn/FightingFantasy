@@ -1,3 +1,9 @@
 {
-  "Title": "Robot Commando"
+  "Title": "Robot Commando",
+  "Map": {
+    "0": {
+      "Id": 0,
+      "Description": "You are a rancher in the land of Thalos. Your people (and your enemies, the savage Karosseans) have built huge robots for many purposes. With a skilled operator at the controls, a robot can replace a hundred men - to mine ore, erect buildings, - move cargo, or just about anything else."
+    }
+  }
 }

@@ -12,8 +12,9 @@ namespace FightingFantasy.Engine.Models
 
         public Protagonist Protagonist { get; set; }
 
-        public bool IsSavedGame = false;
+        public bool IsSavedGame { get; set; }
 
+        public int Location { get; set; }
 
         public static GameState LoadGame(string path)
         {

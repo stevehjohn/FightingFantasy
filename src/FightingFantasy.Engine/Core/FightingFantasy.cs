@@ -38,5 +38,10 @@ namespace FightingFantasy.Engine.Core
                                          };
             }
         }
+
+        public string GetLocationDescription()
+        {
+            return GameState.Map[GameState.Location].Description;
+        }
     }
 }

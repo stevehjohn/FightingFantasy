@@ -131,6 +131,10 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             _output.Write($"<u>{_engine.Title}</u>\n\n");
 
+            _output.Write(_engine.GetLocationDescription());
+
+            _output.Write("\n\n");
+
             _state = State.Playing;
         }
     }

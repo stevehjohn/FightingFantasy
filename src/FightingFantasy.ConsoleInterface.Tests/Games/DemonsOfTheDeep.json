@@ -1,3 +1,10 @@
 {
-  "Title": "Demons of the Deep"
+  "Title": "Demons of the Deep",
+  "Map": {
+    "0": {
+      "Id": 0,
+      "Description":
+        "You are a doughty sailor, a rover of the seven seas. You have many years' experience as a mariner, on great ships and small, on sailing-boats and huge warships. Neither howling storm not dead calm disturbs you. Your trusty cutlass has slain many brigands and strange creatures of the deep. In port, you keep your listeners enthralled with your sea-stories. Some are true, some aren't... but nobody knows the difference except you.<br> You are five days out of Port Blacksand, first mate on the good ship <u>Sunfish</u>, when the pirate ship strikes."
+    }
+  }
 }
