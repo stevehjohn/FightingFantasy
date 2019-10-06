@@ -68,5 +68,17 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
 
             _output.Verify(o => o.Write(It.Is<string>(s => s.StartsWith("\nThe following commands"))));
         }
+
+        [Test]
+        public void Run_can_clear_the_screen()
+        {
+            _input.SetupSequence(i => i.ReadLine())
+                  .Returns("Clear")
+                  .Returns("Exit");
+
+            _consoleUi.Run();
+
+            _output.Verify(o => o.Clear());
+        }
     }
 }
