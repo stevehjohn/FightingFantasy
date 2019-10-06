@@ -18,6 +18,10 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         public bool KeyAvailable => System.Console.KeyAvailable;
 
+        public int CursorLeft => System.Console.CursorLeft;
+
+        public int WindowWidth => System.Console.WindowWidth;
+
         public void Write(char character)
         {
             System.Console.Write(character);

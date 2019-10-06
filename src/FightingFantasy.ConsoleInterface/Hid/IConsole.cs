@@ -10,6 +10,10 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         bool KeyAvailable { get; }
 
+        int CursorLeft { get; }
+
+        int WindowWidth { get; }
+
         void Write(char character);
 
         void Write(string text);
