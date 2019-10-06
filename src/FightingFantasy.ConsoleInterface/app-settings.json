@@ -2,10 +2,11 @@
   "ColourScheme": {
     "Normal": "Gray",
     "Bold": "Blue",
-    "Italic": "Blue",
-    "Underline": "Blue",
-    "Caps": "Blue",
-    "Prompt": "Yellow" 
+    "Italic": "Red",
+    "Underline": "Green",
+    "Caps": "Cyan",
+    "Prompt": "Yellow",
+    "UserInput":  "White" 
   },
   "TextDelay": 20,
   "LineBreakDelay": 250 

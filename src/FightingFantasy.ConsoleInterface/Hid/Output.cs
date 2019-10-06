@@ -7,11 +7,18 @@ namespace FightingFantasy.ConsoleInterface.Hid
 {
     public class Output : IOutput
     {
+        private readonly IConsole _console;
+
+        public Output(IConsole console)
+        {
+            _console = console;
+        }
+
         public void Write(string text)
         {
-            Console.CursorVisible = false;
+            _console.CursorVisible = false;
             
-            Console.ForegroundColor = AppSettings.Instance.ColourScheme.Normal;
+            _console.ForegroundColour = AppSettings.Instance.ColourScheme.Normal;
 
             for (var i = 0; i < text.Length; i++)
             {
@@ -24,7 +31,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             i++;
                         }
 
-                        Console.ForegroundColor = AppSettings.Instance.ColourScheme.Normal;
+                        _console.ForegroundColour = AppSettings.Instance.ColourScheme.Normal;
 
                         continue;
                     }
@@ -61,17 +68,22 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             break;
                     }
 
-                    Console.ForegroundColor = colour;
+                    _console.ForegroundColour = colour;
 
                     continue;
                 }
 
-                Console.Write(text[i]);
+                _console.Write(text[i]);
 
                 Thread.Sleep(text[i] == '\n' 
                                  ? AppSettings.Instance.LineBreakDelay 
                                  : AppSettings.Instance.TextDelay);
             }
+        }
+
+        public void Clear()
+        {
+            _console.Clear();
         }
     }
 }

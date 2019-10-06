@@ -6,7 +6,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
     {
         public string Read()
         {
-            return Console.ReadLine();
+            throw new NotImplementedException();
         }
     }
 }

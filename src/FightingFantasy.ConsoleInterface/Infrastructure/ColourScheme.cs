@@ -15,5 +15,7 @@ namespace FightingFantasy.ConsoleInterface.Infrastructure
         public ConsoleColor Caps { get; set; }
 
         public ConsoleColor Prompt { get; set; }
+
+        public ConsoleColor UserInput { get; set; }
     }
 }

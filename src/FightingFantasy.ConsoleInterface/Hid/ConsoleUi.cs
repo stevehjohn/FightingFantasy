@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FightingFantasy.ConsoleInterface.Hid
+﻿namespace FightingFantasy.ConsoleInterface.Hid
 {
     public class ConsoleUi
     {
@@ -15,7 +13,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         public void Run()
         {
-            Console.Clear();
+            _output.Clear();
 
             _output.Write("\nWelcome to Stevö John's <b>Fighting Fantasy</b> Game Engine!\n\n");
             _output.Write("Type <b>help</b> at any time for commands.\n\n");
