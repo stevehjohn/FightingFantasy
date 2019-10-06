@@ -6,7 +6,7 @@ namespace FightingFantasy.Engine.Core
     {
         private readonly IDie _die;
 
-        private GameState _gameState;
+        internal GameState GameState;
 
         public FightingFantasy(IDie die)
         {
@@ -15,11 +15,11 @@ namespace FightingFantasy.Engine.Core
 
         public void LoadGame(string path)
         {
-            _gameState = GameState.LoadGame(path);
+            GameState = GameState.LoadGame(path);
 
-            if (! _gameState.IsSavedGame)
+            if (! GameState.IsSavedGame)
             {
-                _gameState.Protagonist = new Protagonist
+                GameState.Protagonist = new Protagonist
                                          {
                                              Skill =
                                              {

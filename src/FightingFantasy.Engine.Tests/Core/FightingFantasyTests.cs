@@ -29,6 +29,10 @@ namespace FightingFantasy.Engine.Tests.Core
                 .Returns(6);
 
             _engine.LoadGame(".\\TestFiles\\GameState.json");
+
+            Assert.That(_engine.GameState.Protagonist.Skill.Value, Is.EqualTo(9));
+            Assert.That(_engine.GameState.Protagonist.Stamina.Value, Is.EqualTo(17));
+            Assert.That(_engine.GameState.Protagonist.Luck.Value, Is.EqualTo(12));
         }
     }
 }
