@@ -39,18 +39,18 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                     i++;
 
-                    var emphasis = new StringBuilder();
+                    var markup = new StringBuilder();
 
                     while (text[i] != '>')
                     {
-                        emphasis.Append(text[i]);
+                        markup.Append(text[i]);
 
                         i++;
                     }
 
                     ConsoleColor colour;
 
-                    switch (emphasis.ToString().ToLower())
+                    switch (markup.ToString().ToLower())
                     {
                         case "b":
                             colour = AppSettings.Instance.ColourScheme.Bold;
@@ -63,6 +63,9 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             break;
                         case "c":
                             colour = AppSettings.Instance.ColourScheme.Caps;
+                            break;
+                        case "br":
+                            _console.Write("\n\n");
                             break;
                         default:
                             colour = AppSettings.Instance.ColourScheme.Normal;
