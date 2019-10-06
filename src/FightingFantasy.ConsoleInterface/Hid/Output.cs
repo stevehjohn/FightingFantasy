@@ -66,7 +66,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             break;
                         case "br":
                             _console.Write("\n\n");
-                            break;
+                            continue;
                         default:
                             colour = AppSettings.Instance.ColourScheme.Normal;
                             break;
