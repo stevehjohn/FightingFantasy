@@ -1,4 +1,6 @@
-﻿using FightingFantasy.Engine.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using FightingFantasy.Engine.Models;
 
 namespace FightingFantasy.Engine.Core
 {
@@ -42,6 +44,16 @@ namespace FightingFantasy.Engine.Core
         public string GetLocationDescription()
         {
             return GameState.Map[GameState.Location].Description;
+        }
+
+        public IEnumerable<Choice> GetChoices()
+        {
+            return GameState.Map[GameState.Location].Choices ?? Enumerable.Empty<Choice>();
+        }
+
+        public void MakeChoice(int index)
+        {
+            GameState.Location = GameState.Map[GameState.Location].Choices[index].Id;
         }
     }
 }

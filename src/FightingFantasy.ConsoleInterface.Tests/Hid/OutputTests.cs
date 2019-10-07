@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ExceptionServices;
+﻿using System.Linq;
 using System.Text;
 using FightingFantasy.ConsoleInterface.Hid;
 using FightingFantasy.ConsoleInterface.Infrastructure;

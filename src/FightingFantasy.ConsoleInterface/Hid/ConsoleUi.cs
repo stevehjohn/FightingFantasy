@@ -13,6 +13,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
         private readonly Engine.Core.FightingFantasy _engine;
 
         private State _state;
+        private bool _locationChanged;
 
         public ConsoleUi(IOutput output, IInput input)
         {
@@ -33,6 +34,26 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             while (true)
             {
+                if (_locationChanged)
+                {
+                    _output.Write(_engine.GetLocationDescription());
+
+                    _output.Write("\n\n");
+
+                    var i = 1;
+
+                    foreach (var choice in _engine.GetChoices())
+                    {
+                        _output.Write($"  <b>{i}</b> - {choice.Description}\n");
+
+                        i++;
+                    }
+                    
+                    _output.Write("\n");
+
+                    _locationChanged = false;
+                }
+
                 var input = _input.ReadLine().Trim().ToLower();
 
                 if (string.IsNullOrWhiteSpace(input))
@@ -47,6 +68,10 @@ namespace FightingFantasy.ConsoleInterface.Hid
                     {
                         case State.SelectingGame:
                             StartGame(index);
+                            continue;
+                        case State.Playing:
+                            _engine.MakeChoice(index - 1);
+                            _locationChanged = true;
                             continue;
                     }
                 }
@@ -86,6 +111,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _output.Write("  <b>Save</b>  - Save the game so you can come back later.\n");
             _output.Write("  <b>Clear</b> - Clear the screen.\n");
             _output.Write("  <b>Exit</b>  - Quit the game.\n");
+
+            // TODO: Inventory, Health, Describe, Options
 
             _output.Write("\n");
         }
@@ -131,9 +158,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             _output.Write($"<u>{_engine.Title}</u>\n\n");
 
-            _output.Write(_engine.GetLocationDescription());
-
-            _output.Write("\n\n");
+            _locationChanged = true;
 
             _state = State.Playing;
         }
