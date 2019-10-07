@@ -258,11 +258,25 @@
     "17": {
       "Id": 17,
       "Description": "You dive for the trapdoor, but you cannot get it open in time. The Bone Demon's spear jabs you.",
-      "StaminaChange": -2, 
+      "StaminaChange": -2,
       "Choices": [
         {
           "Description": "Fight the demon.",
-          "Id": 168 
+          "Id": 168
+        }
+      ]
+    },
+    "18": {
+      "Id": 18,
+      "Description": "You remove the Axefish from your bag and release it. It quickly grows into a large fish with a heavy beak. It swims towards the bars, attacks them and batters them to pieces. It then swims away, its duty done. As you hurry from the cave, you find an ordinary sword, which you may take if you like. The current carries you downstream along the abyss.",
+      "Choices": [
+        {
+          "Description": "Take the sword and continue.",
+          "Id": 148
+        },
+        {
+          "Description": "Continue...",
+          "Id": 148
         }
       ] 
     },
