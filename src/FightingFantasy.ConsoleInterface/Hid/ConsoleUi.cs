@@ -36,6 +36,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
             {
                 if (_locationChanged)
                 {
+                    _output.Write("\n");
+
                     _output.Write(_engine.GetLocationDescription());
 
                     _output.Write("\n\n");
@@ -156,7 +158,9 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             _engine.LoadGame(files[index - 1]);
 
-            _output.Write($"<u>{_engine.Title}</u>\n\n");
+            _output.Write($"<u>{_engine.Title}</u>\n");
+
+            _output.Write($"<u>{new string('-', _engine.Title.Length)}</u>\n");
 
             _locationChanged = true;
 

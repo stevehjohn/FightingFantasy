@@ -109,7 +109,7 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
 
             if (isValid)
             {
-                _output.Verify(o => o.Write($"<u>{title}</u>\n\n"));
+                _output.Verify(o => o.Write($"<u>{title}</u>\n"));
             }
             else
             {
