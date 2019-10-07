@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FightingFantasy.Engine.Models;
 
@@ -12,9 +13,13 @@ namespace FightingFantasy.Engine.Core
 
         public string Title => GameState.Title;
 
+        public List<string> Events { get; }
+
         public FightingFantasy(IDie die)
         {
             _die = die;
+
+            Events = new List<string>();
         }
 
         public void LoadGame(string path)
@@ -69,11 +74,31 @@ namespace FightingFantasy.Engine.Core
 
         public void MakeChoice(int index)
         {
+            Events.Clear();
+
             GameState.Location = GetChoices().ToList()[index].Id;
 
             var location = GameState.Map[GameState.Location];
 
-            GameState.Protagonist.Luck.Value += location.LuckChange;
+            if (location.LuckChange != 0)
+            {
+                var luck = GameState.Protagonist.Luck.Value;
+
+                GameState.Protagonist.Luck.Value += location.LuckChange;
+
+                if (GameState.Protagonist.Luck.Value > GameState.Protagonist.Luck.InitialValue)
+                {
+                    GameState.Protagonist.Luck.Value = GameState.Protagonist.Luck.InitialValue;
+                }
+
+                var delta = GameState.Protagonist.Luck.Value - luck;
+
+                if (delta != 0)
+                {
+                    // TODO: Move strings out of engine and into game definition somehow.
+                    Events.Add($"Your luck has {(delta > 0 ? "increased" : "decreased")} by <i>{Math.Abs(delta)}</i> point{(Math.Abs(delta) != 1 ? "s" : string.Empty)}.");
+                }
+            }
         }
     }
 }

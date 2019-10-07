@@ -42,6 +42,18 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                     _output.Write("\n\n");
 
+                    foreach (var engineEvent in _engine.Events)
+                    {
+                        _output.Write(engineEvent);
+
+                        _output.Write("\n");
+                    }
+
+                    if (_engine.Events.Any())
+                    {
+                        _output.Write("\n\n");
+                    }
+
                     var i = 1;
 
                     foreach (var choice in _engine.GetChoices())
