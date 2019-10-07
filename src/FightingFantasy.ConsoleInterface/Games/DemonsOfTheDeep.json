@@ -17,17 +17,31 @@
       "Choices": [
         {
           "Description": "Remove the heavy belt and swim to the surface.",
-          "Id": 63 
+          "Id": 63
         },
         {
           "Description": "Explore the sunken courtyard.",
           "Id": 173
         }
+      ]
+    },
+    "2": {
+      "Id": 2,
+      "Description": "The underwater gardens seem to be laid out just like a formal garden on land. You swim through the heavy iron gate, noting that it is not at all rusty. Inside the gate, you see many beautiful specimens of seaweed, coral and water plants. Instead of birds, the 'trees' are filled with coloured fish. It is eerie, but peaceful. A few yards from the gate, the path splits in two.",
+      "Choices": [
+        {
+          "Description": "Go to the left.",
+          "id": 359
+        },
+        {
+          "Description": "Go to the right.",
+          "id": 174
+        }
       ] 
     },
     "3": {
       "Id": 3,
-      "Description": "You swim strongly up and away from the stadium, through the crack in the dome and over the city once more. Not far away, you see the patch of clean sand that you observe earlier. You can now see that a small object of some kind is in the middle of the sand.",
+      "Description": "You swim strongly up and away from the stadium, through the crack in the dome and over the city once more. Not far away, you see the patch of clean sand that you observed earlier. You can now see that a small object of some kind is in the middle of the sand.",
       "Choices": [
         {
           "Description": "Continue...",
