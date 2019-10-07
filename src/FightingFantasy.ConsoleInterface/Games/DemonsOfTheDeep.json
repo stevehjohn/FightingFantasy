@@ -311,7 +311,11 @@
           "Description": "Continue...",
           "Id": 234
         }
-      ] 
+      ]
+    },
+    "21": {
+      "Id": 21,
+      "Description": "You pick up the trident and heft it. It vibrates in your hand. Suddenly it shoots forward, dragging you with it. You try to let go, but your fingers are stuck as though with glue. You are carried along quickly, and your surprised shout sends bubbles towards the ceiling. As you pass through their quarters, other Mermen and Mermaids stare at you in surprise. Then you are outside the cavern, speeding through the green waters. You have lost track of your location, but you know you are being carried further and further from the surface."
     },
     "196": {
       "Id": 196,

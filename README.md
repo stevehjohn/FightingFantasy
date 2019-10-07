@@ -11,3 +11,4 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Lose Stamina points. Location 17.
 - Take/not take and continue. Location 18.
 - Lose stamina unless have item. Location 19.
+- Test your luck. Location 21.
