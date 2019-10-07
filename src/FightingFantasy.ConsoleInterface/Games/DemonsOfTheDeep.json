@@ -83,6 +83,12 @@
           "Description": "Attack her.",
           "Id": 254
         }
+      ]
+    },
+    "6": {
+      "Id": 6,
+      "Description": "You swim down into the chasm. The light fails rapidly as you swim lower.",
+      "Choices": [
       ] 
     },
     "196": {
