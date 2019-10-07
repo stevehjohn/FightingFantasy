@@ -23,6 +23,18 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             for (var i = 0; i < text.Length; i++)
             {
+                var j = 0;
+
+                while (i + j < text.Length && text[i + j] != ' ')
+                {
+                    j++;
+                }
+
+                if (_console.CursorLeft + j >= _console.WindowWidth)
+                {
+                    _console.Write('\n');
+                }
+
                 if (text[i] == '<')
                 {
                     if (text[i + 1] == '/')
