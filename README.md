@@ -8,3 +8,4 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Move strings out of engine in an elegant way.
 - Mechanism to restore attributes to initial values. See Location 14.
 - Luck points on location 15.
+- Lose Stamina points. Location 17.

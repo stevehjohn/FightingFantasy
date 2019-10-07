@@ -13,5 +13,7 @@ namespace FightingFantasy.Engine.Models
         public int VisitCount { get; set; }
 
         public int LuckChange { get; set; }
+
+        public int StaminaChange { get; set; }
     }
 }

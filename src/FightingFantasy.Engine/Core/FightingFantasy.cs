@@ -99,6 +99,27 @@ namespace FightingFantasy.Engine.Core
                     Events.Add($"Your luck has {(delta > 0 ? "increased" : "decreased")} by <i>{Math.Abs(delta)}</i> point{(Math.Abs(delta) != 1 ? "s" : string.Empty)}.");
                 }
             }
+
+            // TODO: Same routine as above - make generic somehow?
+            if (location.StaminaChange != 0)
+            {
+                var stamina = GameState.Protagonist.Stamina.Value;
+
+                GameState.Protagonist.Stamina.Value += location.StaminaChange;
+
+                if (GameState.Protagonist.Stamina.Value > GameState.Protagonist.Stamina.InitialValue)
+                {
+                    GameState.Protagonist.Stamina.Value = GameState.Protagonist.Stamina.InitialValue;
+                }
+
+                var delta = GameState.Protagonist.Stamina.Value - stamina;
+
+                if (delta != 0)
+                {
+                    // TODO: Move strings out of engine and into game definition somehow.
+                    Events.Add($"Your stamina has {(delta > 0 ? "increased" : "decreased")} by <i>{Math.Abs(delta)}</i> point{(Math.Abs(delta) != 1 ? "s" : string.Empty)}.");
+                }
+            }
         }
     }
 }

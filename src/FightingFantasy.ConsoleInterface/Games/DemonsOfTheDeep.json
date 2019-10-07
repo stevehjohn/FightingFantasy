@@ -253,6 +253,17 @@
           "Description": "A square stone building, very well preserved.",
           "Id": 340
         }
+      ]
+    },
+    "17": {
+      "Id": 17,
+      "Description": "You dive for the trapdoor, but you cannot get it open in time. The Bone Demon's spear jabs you.",
+      "StaminaChange": -2, 
+      "Choices": [
+        {
+          "Description": "Fight the demon.",
+          "Id": 168 
+        }
       ] 
     },
     "196": {
