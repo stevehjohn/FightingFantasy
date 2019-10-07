@@ -189,6 +189,19 @@
         }
       ]
     },
+    "13": {
+      "Id": 13,
+      "Description": "You fight the four Batfish. They dart around, swooping in to bite, so you can battle them one at a time:",
+      "CanEscape": false,
+      "Success": 390,
+      "Antagonists": [
+        {
+          "Description": "Batfish",
+          "Skill": 6,
+          "Stamina": 4 
+        }
+      ] 
+    },
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
