@@ -198,7 +198,42 @@
         {
           "Description": "Batfish",
           "Skill": 6,
-          "Stamina": 4 
+          "Stamina": 4
+        },
+        {
+          "Description": "Batfish",
+          "Skill": 6,
+          "Stamina": 4
+        },
+        {
+          "Description": "Batfish",
+          "Skill": 6,
+          "Stamina": 4
+        },
+        {
+          "Description": "Batfish",
+          "Skill": 6,
+          "Stamina": 4
+        }
+      ]
+    },
+    "14": {
+      "Id": 14,
+      "Description": "You reach into your bag and find the bottle with the envelope. He is amazed, but immediately opens the bottle and reads the message. It is obviously important; he hems and haws, puts it in a pocket of his robe and thanks you gruffily. For the first time, he seems to notice your bedraggled condition. He snaps his fingers and restores your <c>Stamina</c> and <c>Luck</c> to their initial values!",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 376
+        }
+      ]
+    },
+    "15": {
+      "Id": 15,
+      "Description": "The Water Elemental begs your pardon for threatening you. 'You did me no wrong,' it says. 'But I have been held prisoner here these many years, and did unjustly loose my wrath upon you. My thanks for staying your hand when you might have slain me. The current wafts you back through the coral tunnel so cleverly that you are not scraped at all.'",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 197 
         }
       ] 
     },
