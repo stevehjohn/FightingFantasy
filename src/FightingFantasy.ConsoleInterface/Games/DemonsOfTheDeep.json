@@ -1,5 +1,5 @@
 {
-  "Title": "Demons of the Deep",
+  "Title": "Demons of the Deep (Book 19)",
   "Map": {
     "0": {
       "Id": 0,
@@ -48,6 +48,20 @@
           "Id": 196
         }
       ]
+    },
+    "4": {
+      "Id": 4,
+      "Description": "The king's eyes open even wider. 'Yes, since you ask, there is a great service you can do for our kingdom. In an upper room of our palace lies a fair princess, doomed to sleep until she be kissed by a hero. None of our nobles has been able to lift the spell. Will you try?",
+      "Choices": [
+        {
+          "Description": "Agree to try.",
+          "Id": 399
+        },
+        {
+          "Description": "Decline the honour.",
+          "Id": 284
+        }
+      ] 
     },
     "196": {
       "Id": 196,
