@@ -103,6 +103,24 @@
         }
       ]
     },
+    "7": {
+      "Id": 7,
+      "Description": "You doubt that you could flee from the creature, and you are certainly not anxious to fight it. Your only hope is to talk to it. What will you appeal to in your speech?",
+      "Choices": [
+        {
+          "Description": "Its good will.",
+          "Id": 334
+        },
+        {
+          "Description": "Its greed.",
+          "Id": 178
+        },
+        {
+          "Description": "Its hatred of pirates.",
+          "Id": 287 
+        }
+      ] 
+    },
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
