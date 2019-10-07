@@ -61,6 +61,28 @@
           "Description": "Decline the honour.",
           "Id": 284
         }
+      ]
+    },
+    "5": {
+      "Id": 5,
+      "Description": "Her evil appearance chills your blood, but perhaps she can be helpful to you. Keeping your hand well away from your sword, you speak to her as courteously as you can. 'O wise woman, pray forgive my intrusion, but I am in need of help. I have brought you a valuable gift, and you would honour me by accepting it.' She thrusts out her hand greedily. What will you offer her?",
+      "Choices": [
+        {
+          "Description": "A Black Pearl.",
+          "Id": 127
+        },
+        {
+          "Description": "A Toothfish.",
+          "Id": 127
+        },
+        {
+          "Description": "A magic sword.",
+          "Id": 127
+        },
+        {
+          "Description": "Attack her.",
+          "Id": 254
+        }
       ] 
     },
     "196": {
