@@ -92,6 +92,15 @@
       "Id": 6,
       "Description": "You swim down into the chasm. The light fails rapidly as you swim lower.",
       "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 324,
+          "DefaultIfItemIdPossessed": 4
+        },
+        {
+          "Description": "Continue...",
+          "Id": 180
+        }
       ]
     },
     "196": {
@@ -125,6 +134,10 @@
     {
       "Id": 3,
       "Description": "Magic sword"
+    },
+    {
+      "Id": 4,
+      "Description": "Glowfish"
     }
   ] 
 }

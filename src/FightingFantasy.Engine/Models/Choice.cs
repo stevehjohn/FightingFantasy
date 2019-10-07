@@ -7,5 +7,7 @@
         public int Id { get; set; }
 
         public int RequiredItemId { get; set; }
+
+        public int DefaultIfItemIdPossessed { get; set; }
     }
 }
