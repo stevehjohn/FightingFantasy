@@ -278,6 +278,39 @@
           "Description": "Continue...",
           "Id": 148
         }
+      ]
+    },
+    "19": {
+      "Id": 19,
+      "Description": "Before your hand reaches the chest, one of the pink tentacles drifts down across your wrist. It burns like fire! What will you do now?",
+      "StaminaChange": -1,
+      "Choices": [
+        {
+          "Description": "Leave the house.",
+          "Id": 381
+        },
+        {
+          "Description": "Drag the chest out with your sword.",
+          "Id": 325
+        },
+        {
+          "Description": "Attack the Anemones.",
+          "Id": 94
+        }
+      ]
+    },
+    "20": {
+      "Id": 20,
+      "Description": "You enter a part of the garden that looks rather like an orchard. Tall branches of coral support vine-like plants bearing red and orange fruit. On the sandy floor of the garden, small crabs and fish are picking at a fallen fruit.",
+      "Choices": [
+        {
+          "Description": "Sample a fruit.",
+          "Id": 124
+        },
+        {
+          "Description": "Continue...",
+          "Id": 234
+        }
       ] 
     },
     "196": {
