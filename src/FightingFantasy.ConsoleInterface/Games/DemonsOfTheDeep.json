@@ -146,6 +146,34 @@
         }
       ]
     },
+    "10": {
+      "Id": 10,
+      "Description": "You swim away as fast as you can, leaving the sinister skull behind you. When you risk a look over your shoulder, you see that the shimmering has vanished and everything is as it was before. You swim towards the large stone building.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 159
+        }
+      ]
+    },
+    "11": {
+      "Id": 11,
+      "Description": "You swim up until your head is level with the statue's, and you lift the crown from its stony brow. As you do so, its eyes turn towards you and its lips move. It speaks, in a voice so deep you can feel your bones vibrate: 'Who dares take the Crown of Atlantis from its resting-place? Will you fight for your prize or flee like a coward?'",
+      "Choices": [
+        {
+          "Description": "Fight the Statue.",
+          "Id": 232
+        },
+        {
+          "Description": "Flee like a coward.",
+          "Id": 39
+        },
+        {
+          "Description": "Return the crown.",
+          "Id": 0
+        }
+      ] 
+    } 
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
