@@ -116,5 +116,17 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
                 _output.Verify(o => o.Write("\nNot a valid game id. Type <b>New</b> again to see a list of games available.\n\n"));
             }
         }
+
+        [Test]
+        public void Run_errors_on_an_index_when_not_in_the_correct_state()
+        {
+            _input.SetupSequence(i => i.ReadLine())
+                  .Returns("1")
+                  .Returns("Exit");
+
+            _consoleUi.Run();
+
+            _output.Verify(o => o.Write("\nI'm sorry, I don't know how to <b>1</b>.\n\n"));
+        }
     }
 }
