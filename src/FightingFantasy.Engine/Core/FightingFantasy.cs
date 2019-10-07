@@ -48,14 +48,28 @@ namespace FightingFantasy.Engine.Core
 
         public IEnumerable<Choice> GetChoices()
         {
-            var choices = GameState.Map[GameState.Location].Choices ?? Enumerable.Empty<Choice>();
+            var choices = (GameState.Map[GameState.Location].Choices ?? Enumerable.Empty<Choice>()).ToList();
+
+            var defaultChoice = choices.FirstOrDefault(c => c.DefaultIfItemIdPossessed > 0);
+
+            if (defaultChoice != null)
+            {
+                if (GameState.Protagonist.Inventory.Any(i => i.Id == defaultChoice.DefaultIfItemIdPossessed))
+                {
+                    return choices.Where(c => c.DefaultIfItemIdPossessed > 0);
+                }
+                else
+                {
+                    return choices.Where(c => c.DefaultIfItemIdPossessed == 0);
+                }
+            }
 
             return choices.Where(c => c.RequiredItemId == 0 || GameState.Protagonist.Inventory.Any(i => i.Id == c.RequiredItemId));
         }
 
         public void MakeChoice(int index)
         {
-            GameState.Location = GameState.Map[GameState.Location].Choices[index].Id;
+            GameState.Location = GetChoices().ToList()[index].Id;
         }
     }
 }
