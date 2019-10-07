@@ -184,6 +184,48 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
         }
 
         [Test]
+        public void Write_processes_br_element_and_trims_leading_spaces()
+        {
+            _output.Write("This is one line.<br> This is the next.");
+
+            _console.Verify(c => c.Write('T'));
+            _console.Verify(c => c.Write('h'));
+            _console.Verify(c => c.Write('i'));
+            _console.Verify(c => c.Write('s'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('i'));
+            _console.Verify(c => c.Write('s'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('o'));
+            _console.Verify(c => c.Write('n'));
+            _console.Verify(c => c.Write('e'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('l'));
+            _console.Verify(c => c.Write('i'));
+            _console.Verify(c => c.Write('n'));
+            _console.Verify(c => c.Write('e'));
+            _console.Verify(c => c.Write('.'));
+            _console.Verify(c => c.Write("\n\n"));
+            _console.Verify(c => c.Write('T'));
+            _console.Verify(c => c.Write('h'));
+            _console.Verify(c => c.Write('i'));
+            _console.Verify(c => c.Write('s'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('i'));
+            _console.Verify(c => c.Write('s'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('t'));
+            _console.Verify(c => c.Write('h'));
+            _console.Verify(c => c.Write('e'));
+            _console.Verify(c => c.Write(' '));
+            _console.Verify(c => c.Write('n'));
+            _console.Verify(c => c.Write('e'));
+            _console.Verify(c => c.Write('x'));
+            _console.Verify(c => c.Write('t'));
+            _console.Verify(c => c.Write('.'));
+        }
+
+        [Test]
         public void Clear_calls_underlying_console_Clear()
         {
             _output.Clear();
