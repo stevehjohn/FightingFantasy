@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Text;
 using FightingFantasy.ConsoleInterface.Hid;
 using FightingFantasy.ConsoleInterface.Infrastructure;
 using Moq;
@@ -135,6 +138,25 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
             _output.Write("This is one line.<br> This is the next.");
 
             Assert.That(output.ToString(), Is.EqualTo("This is one line.\n\nThis is the next."));
+        }
+
+        [Test]
+        public void Write_inserts_newline_if_word_will_wrap()
+        {
+            var output = new StringBuilder();
+
+            _console.Setup(c => c.Write(It.IsAny<char>()))
+                    .Callback<char>(c => output.Append(c));
+
+            _console.SetupGet(c => c.CursorLeft)
+                    .Returns(() => output.ToString().Split('\n').Last().Length);
+
+            _console.SetupGet(c => c.WindowWidth)
+                    .Returns(25);
+
+            _output.Write("This is one line. |-------------| That should wrap.");
+
+            Assert.That(output.ToString(), Is.EqualTo("This is one line. \n|-------------| That \nshould wrap."));
         }
 
         [Test]
