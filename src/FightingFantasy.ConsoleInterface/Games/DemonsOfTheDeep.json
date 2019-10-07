@@ -233,7 +233,25 @@
       "Choices": [
         {
           "Description": "Continue...",
-          "Id": 197 
+          "Id": 197
+        }
+      ]
+    },
+    "16": {
+      "Id": 16,
+      "Description": "You swim away from the building, over the courtyard with the pentagram, and over the city of Atlantis. You find that swimming is coming very naturally to you now. Looking down over the city, you see no movement except for fish. The buildings appear deserted. Some have fallen into rubble and most are damaged, but the effect is still one of peace and beauty. Three spots catch your eye, and you must decide which one to visit.",
+      "Choices": [
+        {
+          "Description": "A huge red-coloured dome with a broken roof.",
+          "Id": 223
+        },
+        {
+          "Description": "An unnaturally clear, smooth patch of sand.",
+          "Id": 196
+        },
+        {
+          "Description": "A square stone building, very well preserved.",
+          "Id": 340
         }
       ] 
     },
