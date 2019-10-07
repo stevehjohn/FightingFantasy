@@ -9,7 +9,7 @@ namespace FightingFantasy.Engine.Tests.Core
         [Test]
         public void Factory_return_initialised_FightingFantasy_class()
         {
-            Engine.Core.FightingFantasy fightingFantasy  = null;
+            Engine.Core.FightingFantasy fightingFantasy = null;
 
             Assert.DoesNotThrow(() => fightingFantasy = FightingFantasyFactory.Create());
 
