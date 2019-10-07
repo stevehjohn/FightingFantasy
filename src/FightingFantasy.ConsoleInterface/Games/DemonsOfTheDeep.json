@@ -172,8 +172,23 @@
           "Description": "Return the crown.",
           "Id": 0
         }
-      ] 
-    } 
+      ]
+    },
+    "12": {
+      "Id": 12,
+      "Description": "The trapdoor slams shut behind you as you whirl in the current. You catch hold of something to steady yourself. You are in pitch-blackness.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 258,
+          "DefaultIfItemIdPossessed": 4
+        },
+        {
+          "Description": "Continue...",
+          "Id": 113
+        }
+      ]
+    },
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
