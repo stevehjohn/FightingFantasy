@@ -48,7 +48,9 @@ namespace FightingFantasy.Engine.Core
 
         public IEnumerable<Choice> GetChoices()
         {
-            return GameState.Map[GameState.Location].Choices ?? Enumerable.Empty<Choice>();
+            var choices = GameState.Map[GameState.Location].Choices ?? Enumerable.Empty<Choice>();
+
+            return choices.Where(c => c.RequiredItemId == 0 || GameState.Protagonist.Inventory.Any(i => i.Id == c.RequiredItemId));
         }
 
         public void MakeChoice(int index)

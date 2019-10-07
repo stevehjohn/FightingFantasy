@@ -37,7 +37,7 @@
           "Description": "Go to the right.",
           "id": 174
         }
-      ] 
+      ]
     },
     "3": {
       "Id": 3,
@@ -69,15 +69,18 @@
       "Choices": [
         {
           "Description": "A Black Pearl.",
-          "Id": 127
+          "Id": 127,
+          "RequiredItemId": 1
         },
         {
           "Description": "A Toothfish.",
-          "Id": 127
+          "Id": 127,
+          "RequiredItemId": 2
         },
         {
           "Description": "A magic sword.",
-          "Id": 127
+          "Id": 127,
+          "RequiredItemId": 3
         },
         {
           "Description": "Attack her.",
@@ -89,7 +92,7 @@
       "Id": 6,
       "Description": "You swim down into the chasm. The light fails rapidly as you swim lower.",
       "Choices": [
-      ] 
+      ]
     },
     "196": {
       "Id": 196,
@@ -109,5 +112,19 @@
         }
       ]
     }
-  }
+  },
+  "Items": [
+    {
+      "Id": 1,
+      "Description": "Black Pearl"
+    },
+    {
+      "Id": 2,
+      "Description": "Toothfish"
+    },
+    {
+      "Id": 3,
+      "Description": "Magic sword"
+    }
+  ] 
 }
