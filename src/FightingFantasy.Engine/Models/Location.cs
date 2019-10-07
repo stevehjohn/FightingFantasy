@@ -11,5 +11,7 @@ namespace FightingFantasy.Engine.Models
         public List<Choice> Choices { get; set; }
 
         public int VisitCount { get; set; }
+
+        public int LuckChange { get; set; }
     }
 }

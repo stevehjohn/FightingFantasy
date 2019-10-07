@@ -117,7 +117,32 @@
         },
         {
           "Description": "Its hatred of pirates.",
-          "Id": 287 
+          "Id": 287
+        }
+      ]
+    },
+    "8": {
+      "Id": 8,
+      "Description": "You hear a rustling behind you. You kick off from the bottom and spin around, your sword at the ready. Then, from all sides at once, the small Crabs attack.",
+      "Choices": [
+        {
+          "Description": "Stand and fight them.",
+          "Id": 169
+        },
+        {
+          "Description": "Flee.",
+          "Id": 118
+        }
+      ]
+    },
+    "9": {
+      "Id": 9,
+      "Description": "The Sea-horse swims madly in circles, bucking and tossing, but you keep your seat. Eventually it quietens, but still rolls its eyes. You pat ts nose reassuringly. You find that you can guide it with your knees, and that it swims much faster than you do. You direct it towards the cathedral in the distance. When you reach your goal, you dismount, and the Sea-horse swims away.",
+      "LuckChange": 2, 
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 269 
         }
       ] 
     },
