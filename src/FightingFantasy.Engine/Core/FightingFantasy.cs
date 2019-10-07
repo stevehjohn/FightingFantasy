@@ -70,6 +70,10 @@ namespace FightingFantasy.Engine.Core
         public void MakeChoice(int index)
         {
             GameState.Location = GetChoices().ToList()[index].Id;
+
+            var location = GameState.Map[GameState.Location];
+
+            GameState.Protagonist.Luck.Value += location.LuckChange;
         }
     }
 }
