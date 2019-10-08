@@ -356,7 +356,17 @@
     },
     "24": {
       "Id": 24,
-      "Description": "You enter the sunken ship. In the sudden dimness, you can barely see where you are going. You grab the side of a door and try to feel your way. TODO"
+      "Description": "You enter the sunken ship. In the sudden dimness, you can barely see where you are going. You grab the side of a door and try to feel your way.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 123
+        }
+      ],
+      "LuckTest": {
+        "Lucky": 348,
+        "Unlucky": 123
+      }
     },
     "25": {
       "Id": 25,
