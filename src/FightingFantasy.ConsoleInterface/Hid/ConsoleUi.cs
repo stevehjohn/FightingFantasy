@@ -113,6 +113,9 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         _output.Write($"\n<i>Skill</i>: {_engine.Skill}, <i>Stamina</i>: {_engine.Stamina}, <i>Luck</i> {_engine.Luck}\n\n");
                         _output.Write($"<i>Locations visited</i>: {_engine.LocationsVisited} ({_engine.LocationsVisitedPercent}%)\n\n");
                         break;
+                    case "desc":
+                        _locationChanged = true;
+                        break;
                     default:
                         if (input.StartsWith("tp"))
                         {
@@ -154,6 +157,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _output.Write("  <b>New</b>   - Start a new game.\n");
             _output.Write("  <b>Load</b>  - Load a saved game.\n");
             _output.Write("  <b>Stats</b> - Display your statistics.\n");
+            _output.Write("  <b>Desc</b>  - Describe your current location.\n");
             _output.Write("  <b>Save</b>  - Save the game so you can come back later.\n");
             _output.Write("  <b>Clear</b> - Clear the screen.\n");
             _output.Write("  <b>Exit</b>  - Quit the game.\n");
