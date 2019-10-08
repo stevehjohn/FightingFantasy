@@ -88,6 +88,8 @@ namespace FightingFantasy.Engine.Core
             GameState.Location = GetChoices().ToList()[index].Id;
 
             ProcessLocationEvents();
+
+            ProcessLocationLuckOutcome();
         }
 
         public IEnumerable<Item> GetLocationItems()
@@ -191,6 +193,35 @@ namespace FightingFantasy.Engine.Core
             var actualDelta = attribute.Value - value;
 
             return actualDelta;
+        }
+ 
+        private void ProcessLocationLuckOutcome()
+        {
+            var location = GameState.Map[GameState.Location];
+
+            if (location.LuckTest == null)
+            {
+                return;
+            }
+
+            var luck = GameState.Protagonist.Luck.Value;
+
+            var roll = _die.Roll() + _die.Roll();
+
+            var lucky = roll <= luck;
+
+            if (luck > 0)
+            {
+                GameState.Protagonist.Luck.Value--;
+            }
+
+            var resource = GameState.Resources[lucky ? "lucky" : "unlucky"];
+
+            Events.Add(resource.Replace("{0}", luck.ToString()).Replace("{1}", roll.ToString()));
+
+            location.Choices[0].Id = lucky
+                                         ? location.LuckTest.Lucky
+                                         : location.LuckTest.Unlucky;
         }
     }
 }

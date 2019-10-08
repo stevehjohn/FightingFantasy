@@ -320,7 +320,17 @@
     },
     "21": {
       "Id": 21,
-      "Description": "You pick up the trident and heft it. It vibrates in your hand. Suddenly it shoots forward, dragging you with it. You try to let go, but your fingers are stuck as though with glue. You are carried along quickly, and your surprised shout sends bubbles towards the ceiling. As you pass through their quarters, other Mermen and Mermaids stare at you in surprise. Then you are outside the cavern, speeding through the green waters. You have lost track of your location, but you know you are being carried further and further from the surface. TODO"
+      "Description": "You pick up the trident and heft it. It vibrates in your hand. Suddenly it shoots forward, dragging you with it. You try to let go, but your fingers are stuck as though with glue. You are carried along quickly, and your surprised shout sends bubbles towards the ceiling. As you pass through their quarters, other Mermen and Mermaids stare at you in surprise. Then you are outside the cavern, speeding through the green waters. You have lost track of your location, but you know you are being carried further and further from the surface.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 110
+        }
+      ], 
+      "LuckTest": {
+        "Lucky": 59,
+        "Unlucky": 110 
+      }
     },
     "22": {
       "Id": 22,
@@ -401,6 +411,8 @@
     "luck-up": "Your <i>luck</i> has increased by <i>{0} point{s}</i>.",
     "luck-down": "You <i>luck</i> has decreased by <i>{0} point{s}</i>.",
     "stamina-up": "Your <i>stamina</i> has increased by <i>{0} point{s}</i>.",
-    "stamina-down": "You <i>stamina</i> has decreased by <i>{0} point{s}</i>."
+    "stamina-down": "You <i>stamina</i> has decreased by <i>{0} point{s}</i>.",
+    "lucky": "You test your <i>luck</i>. Your <i>luck</i> score was <i>{0}</i>, and the dice rolls {1}, so you are <u>lucky</u>.",
+    "unlucky": "You test your <i>luck</i>. Your <i>luck</i> score was <i>{0}</i>, and the dice rolls {1}, so you are <b>unlucky</b>."
   } 
 }

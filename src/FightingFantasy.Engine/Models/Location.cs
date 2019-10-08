@@ -23,5 +23,7 @@ namespace FightingFantasy.Engine.Models
         public bool RestoreLuck { get; set; }
 
         public List<int> Items { get; set; }
+
+        public LuckTest LuckTest { get; set; }
     }
 }

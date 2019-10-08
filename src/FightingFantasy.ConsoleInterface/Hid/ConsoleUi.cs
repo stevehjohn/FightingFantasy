@@ -209,6 +209,8 @@ namespace FightingFantasy.ConsoleInterface.Hid
                                 var processEventsMethodInfo = _engine.GetType().GetMethod("ProcessLocationEvents", BindingFlags.Instance | BindingFlags.NonPublic);
                                 processEventsMethodInfo?.Invoke(_engine, null);
 
+                                var processLuckOutcomeMethodInfo = _engine.GetType().GetMethod("ProcessLocationLuckOutcome", BindingFlags.Instance | BindingFlags.NonPublic);
+                                processLuckOutcomeMethodInfo?.Invoke(_engine, null);
                             }
                             break;
                         }
