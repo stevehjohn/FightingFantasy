@@ -98,16 +98,7 @@ namespace FightingFantasy.Engine.Core
 
             if (location.StaminaChange != 0)
             {
-                var stamina = GameState.Protagonist.Stamina.Value;
-
-                GameState.Protagonist.Stamina.Value += location.StaminaChange;
-
-                if (GameState.Protagonist.Stamina.Value > GameState.Protagonist.Stamina.InitialValue)
-                {
-                    GameState.Protagonist.Stamina.Value = GameState.Protagonist.Stamina.InitialValue;
-                }
-
-                var delta = GameState.Protagonist.Stamina.Value - stamina;
+                var delta = ProcessAttributeChange(GameState.Protagonist.Stamina, location.StaminaChange);
 
                 if (delta != 0)
                 {
@@ -115,19 +106,9 @@ namespace FightingFantasy.Engine.Core
                 }
             }
 
-            // TODO: Same routine as above - make generic somehow?
             if (location.LuckChange != 0)
             {
-                var luck = GameState.Protagonist.Luck.Value;
-
-                GameState.Protagonist.Luck.Value += location.LuckChange;
-
-                if (GameState.Protagonist.Luck.Value > GameState.Protagonist.Luck.InitialValue)
-                {
-                    GameState.Protagonist.Luck.Value = GameState.Protagonist.Luck.InitialValue;
-                }
-
-                var delta = GameState.Protagonist.Luck.Value - luck;
+                var delta = ProcessAttributeChange(GameState.Protagonist.Luck, location.LuckChange);
 
                 if (delta != 0)
                 {
@@ -144,6 +125,22 @@ namespace FightingFantasy.Engine.Core
             {
                 GameState.Protagonist.Luck.Value = GameState.Protagonist.Luck.InitialValue;
             }
+        }
+
+        private int ProcessAttributeChange(ProtagonistAttribute attribute, int delta)
+        {
+            var value = attribute.Value;
+
+            attribute.Value += delta;
+
+            if (attribute.Value > attribute.InitialValue)
+            {
+                attribute.Value = attribute.InitialValue;
+            }
+
+            var actualDelta = attribute.Value - value;
+
+            return actualDelta;
         }
     }
 }
