@@ -173,6 +173,16 @@ namespace FightingFantasy.Engine.Core
                 }
             }
 
+            if (location.SkillChange != 0)
+            {
+                var delta = ProcessAttributeChange(GameState.Protagonist.Skill, location.SkillChange);
+
+                if (delta != 0)
+                {
+                    Events.Add(GameState.Resources[delta > 0 ? "skill-up" : "skill-down"].Replace("{0}", Math.Abs(delta).ToString()).Pluralise(delta));
+                }
+            }
+
             if (location.RestoreStamina)
             {
                 GameState.Protagonist.Stamina.Value = GameState.Protagonist.Stamina.InitialValue;

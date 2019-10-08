@@ -15,6 +15,8 @@ namespace FightingFantasy.Engine.Models
         public int LuckChange { get; set; }
 
         public int StaminaChange { get; set; }
+        
+        public int SkillChange { get; set; }
 
         public EventCondition StaminaChangeEventCondition { get; set; }
 

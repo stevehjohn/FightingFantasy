@@ -408,9 +408,41 @@
     },
     "28": {
       "Id": 28,
-      "Description": "The <u>Sea Dragon</u> is several metres long",
-      "Success": 86 
+      "Description": "The <u>Sea Dragon</u> is several metres long, with gleaming green and blue scales and dagger-like talons of ivory. It has no flaming breath, but its teeth and claws are powerful enough.",
+      "Success": 86,
+      "Antagonists": [
+        {
+          "Description": "Sea Dragon",
+          "Skill": 10,
+          "Stamina": 24
+        }
+      ]
     },
+    "29": {
+      "Id": 29,
+      "Description": "You float aimlessly through the darkness for a long time, going with the current. Occasionally you are cut by sharp coral fragments. Eventually your eyes adjust somewhat, and you can see a very dim glow ahead of you. You swim towards it, and see that it is sunlight! You squeeze through a narrow hole and emerge from a patch of seaweed. You are just outside the mausoleum where you found the trapdoor that got you into that fix.",
+      "StaminaChange": -1,
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 23
+        }
+      ]
+    },
+    "30": {
+      "Id": 30,
+      "Description": "You launch yourself at the <c>Water Sprite</c>, aiming a mighty blow at its head. It giggles and changes form. Suddenly, instead of a small elfin creature, you are facing a powerful whirlpool of water. Its force threatens to sweep you in.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 183
+        }
+      ],
+      "LuckTest": {
+        "Lucky": 252,
+        "Unlucky": 183
+      }
+    }, 
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",
@@ -459,6 +491,8 @@
   "Resources": {
     "luck-up": "Your <i>luck</i> has increased by <i>{0} point{s}</i>.",
     "luck-down": "You <i>luck</i> has decreased by <i>{0} point{s}</i>.",
+    "skill-up": "Your <i>skill</i> has increased by <i>{0} point{s}</i>.",
+    "skill-down": "You <i>skill</i> has decreased by <i>{0} point{s}</i>.",
     "stamina-up": "Your <i>stamina</i> has increased by <i>{0} point{s}</i>.",
     "stamina-down": "You <i>stamina</i> has decreased by <i>{0} point{s}</i>.",
     "lucky": "You test your <i>luck</i>. Your <i>luck</i> score was <i>{0}</i>, and the dice rolls {1}, so you are <u>lucky</u>.",
