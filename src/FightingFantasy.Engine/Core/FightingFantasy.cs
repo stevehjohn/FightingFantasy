@@ -16,6 +16,16 @@ namespace FightingFantasy.Engine.Core
 
         public List<string> Events { get; }
 
+        public int Luck => GameState.Protagonist.Luck.Value;
+
+        public int Skill => GameState.Protagonist.Skill.Value;
+
+        public int Stamina => GameState.Protagonist.Stamina.Value;
+
+        public int LocationsVisited => GameState.LocationHistory.Distinct().Count();
+        
+        public int LocationsVisitedPercent => (int) Math.Ceiling(GameState.LocationHistory.Distinct().Count() / (float) GameState.Map.Count * 100.0f);
+
         public FightingFantasy(IDie die)
         {
             _die = die;
@@ -44,6 +54,8 @@ namespace FightingFantasy.Engine.Core
                                                  Value = 6 + _die.Roll()
                                              }
                                          };
+
+                GameState.Location = 0;
             }
         }
 
