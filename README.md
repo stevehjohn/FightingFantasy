@@ -10,3 +10,5 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Test coverage.
 - Mechanism to choose what inventory item to hand over. Location 22.
 - Escape. Location 25.
+- Consistent styling.
+- End state. See location 27.

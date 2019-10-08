@@ -386,6 +386,26 @@
         }
       ]
     },
+    "26": {
+      "Id": 26,
+      "Description": "Your sword cuts right through the shimmering <c>Ghost</c> that has materialised in front of you. A chill runs through your sword-arm.",
+      "SkillChange": -1,
+      "Choices": [
+        {
+          "Description": "Flee.",
+          "Id": 10
+        },
+        {
+          "Description": "Stay and see what the <c>Ghost</c> wants.",
+          "Id": 321
+        }
+      ]
+    },
+    "27": {
+      "Id": 27,
+      "Description": "Your head breaks the surface just as the last rays of sun touch the water. Your gills vanish, and once again you can breathe the sea air. You inhale deeply and kick to stay afloat. Not far away you see a plank; you swim over and catch hold of it. Oh, well... you have been shipwrecked before and survived. Perhaps some day you will have another chance to revenge yourself on the pirates. For now, your adventure is over.",
+      "IsEnd": true 
+    },
     "196": {
       "Id": 196,
       "Description": "You swim closer, until you see a large area of clean white sand. Standing upright in the sand is a moss-covered human skull. As you approach, the water around the skull begins to shimmer and you hear a thin voice inside your head. What will you do?",

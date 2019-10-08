@@ -29,5 +29,7 @@ namespace FightingFantasy.Engine.Models
         public bool CanEscape { get; set; }
 
         public int EscapeLocation { get; set; }
+
+        public bool IsEnd { get; set; }
     }
 }
