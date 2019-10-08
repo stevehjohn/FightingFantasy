@@ -315,7 +315,37 @@
     },
     "21": {
       "Id": 21,
-      "Description": "You pick up the trident and heft it. It vibrates in your hand. Suddenly it shoots forward, dragging you with it. You try to let go, but your fingers are stuck as though with glue. You are carried along quickly, and your surprised shout sends bubbles towards the ceiling. As you pass through their quarters, other Mermen and Mermaids stare at you in surprise. Then you are outside the cavern, speeding through the green waters. You have lost track of your location, but you know you are being carried further and further from the surface."
+      "Description": "You pick up the trident and heft it. It vibrates in your hand. Suddenly it shoots forward, dragging you with it. You try to let go, but your fingers are stuck as though with glue. You are carried along quickly, and your surprised shout sends bubbles towards the ceiling. As you pass through their quarters, other Mermen and Mermaids stare at you in surprise. Then you are outside the cavern, speeding through the green waters. You have lost track of your location, but you know you are being carried further and further from the surface. TODO"
+    },
+    "22": {
+      "Id": 22,
+      "Description": "You pay Cyrano...TODO"
+    },
+    "23": {
+      "Id": 23,
+      "Description": "As you swim away from the mausoleum, you spy a large, sleek Dolphin. It has already seen you and is swimming in your direction. What will you do?",
+      "Choices": [
+        {
+          "Description": "Flee.",
+          "Id": 259
+        },
+        {
+          "Description": "Speak to it.",
+          "Id": 198
+        },
+        {
+          "Description": "Attack it.",
+          "Id": 387
+        }
+      ]
+    },
+    "24": {
+      "Id": 24,
+      "Description": "You enter the sunken ship. In the sudden dimness, you can barely see where you are going. You grab the side of a door and try to feel your way. TODO"
+    },
+    "25": {
+      "Id": 25,
+      "Description": "The Merman looks up in surprise as you dart through his door. When he sees your drawn sword, his eyes open even wider. He throws his Sawfish at you and picks up a long knife - a Knifefish! - from his bench. The Sawfish grows larger and attacks you. You must fight it, and then the Merman. TODO"
     },
     "196": {
       "Id": 196,

@@ -63,10 +63,8 @@ namespace FightingFantasy.Engine.Core
                 {
                     return choices.Where(c => c.DefaultIfItemIdPossessed > 0);
                 }
-                else
-                {
-                    return choices.Where(c => c.DefaultIfItemIdPossessed == 0);
-                }
+
+                return choices.Where(c => c.DefaultIfItemIdPossessed == 0);
             }
 
             return choices.Where(c => c.RequiredItemId == 0 || GameState.Protagonist.Inventory.Any(i => i.Id == c.RequiredItemId));
