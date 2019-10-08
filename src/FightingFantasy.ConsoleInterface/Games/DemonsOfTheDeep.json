@@ -388,6 +388,8 @@
   ],
   "Resources": {
     "luck-up": "Your luck has increased by {0} point{s}.",
-    "luck-down": "You luck has decreased by {0} point{s}."
+    "luck-down": "You luck has decreased by {0} point{s}.",
+    "stamina-up": "Your stamina has increased by {0} point{s}.",
+    "stamina-down": "You stamina has decreased by {0} point{s}."
   } 
 }

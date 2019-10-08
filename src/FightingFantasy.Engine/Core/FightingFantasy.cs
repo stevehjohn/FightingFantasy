@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FightingFantasy.Engine.Extensions;
 using FightingFantasy.Engine.Models;
 
 namespace FightingFantasy.Engine.Core
@@ -93,8 +94,7 @@ namespace FightingFantasy.Engine.Core
 
                 if (delta != 0)
                 {
-                    // TODO: Move strings out of engine and into game definition somehow.
-                    Events.Add($"Your stamina has {(delta > 0 ? "increased" : "decreased")} by <i>{Math.Abs(delta)}</i> point{(Math.Abs(delta) != 1 ? "s" : string.Empty)}.");
+                    Events.Add(GameState.Resources[delta > 0 ? "stamina-up" : "stamina-down"].Replace("{0}", Math.Abs(delta).ToString()).Pluralise(delta));
                 }
             }
 
@@ -114,8 +114,7 @@ namespace FightingFantasy.Engine.Core
 
                 if (delta != 0)
                 {
-                    // TODO: Move strings out of engine and into game definition somehow.
-                    Events.Add($"Your luck has {(delta > 0 ? "increased" : "decreased")} by <i>{Math.Abs(delta)}</i> point{(Math.Abs(delta) != 1 ? "s" : string.Empty)}.");
+                    Events.Add(GameState.Resources[delta > 0 ? "luck-up" : "luck-down"].Replace("{0}", Math.Abs(delta).ToString()).Pluralise(delta));
                 }
             }
 

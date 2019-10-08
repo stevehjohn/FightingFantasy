@@ -17,6 +17,8 @@ namespace FightingFantasy.Engine.Models
 
         public bool IsSavedGame { get; set; }
 
+        public Dictionary<string, string> Resources { get; set; }
+
         public int Location
         {
             get => LocationHistory.LastOrDefault();
