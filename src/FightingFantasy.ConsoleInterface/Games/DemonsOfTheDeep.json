@@ -442,6 +442,25 @@
         "Lucky": 252,
         "Unlucky": 183
       }
+    },
+    "183": {
+      "Id": 183,
+      "Description": "You were off balance from your lunge, and you are drawn directly into the raging whirlpool.",
+      "Choices": []
+    },
+    "252": {
+      "Id": 252,
+      "Description": "Fortunately, your feet were firmly planted, and you were not drawn into the heart of the whirlpool.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 144
+        }
+      ],
+      "LuckTest": {
+        "Lucky": 239,
+        "Unlucky": 144
+      }
     }, 
     "196": {
       "Id": 196,
