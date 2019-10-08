@@ -55,6 +55,13 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         _output.Write("\n");
                     }
 
+                    if (_engine.LocationsVisited == 1)
+                    {
+                        _output.Write("Dice have been rolled and your initial stats have been determined as...\n");
+
+                        _output.Write($"\n<i>Skill</i>: {_engine.Skill}, <i>Stamina</i>: {_engine.Stamina}, <i>Luck</i> {_engine.Luck}\n\n");
+                    }
+
                     var i = 1;
 
                     foreach (var choice in _engine.GetChoices())
