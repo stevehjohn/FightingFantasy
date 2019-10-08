@@ -232,6 +232,7 @@
     "15": {
       "Id": 15,
       "Description": "The Water Elemental begs your pardon for threatening you. 'You did me no wrong,' it says. 'But I have been held prisoner here these many years, and did unjustly loose my wrath upon you. My thanks for staying your hand when you might have slain me. The current wafts you back through the coral tunnel so cleverly that you are not scraped at all.'",
+      "LuckChange": 2,
       "Choices": [
         {
           "Description": "Continue...",
@@ -387,9 +388,9 @@
     }
   ],
   "Resources": {
-    "luck-up": "Your luck has increased by {0} point{s}.",
-    "luck-down": "You luck has decreased by {0} point{s}.",
-    "stamina-up": "Your stamina has increased by {0} point{s}.",
-    "stamina-down": "You stamina has decreased by {0} point{s}."
+    "luck-up": "Your <i>luck</i> has increased by <i>{0} point{s}</i>.",
+    "luck-down": "You <i>luck</i> has decreased by <i>{0} point{s}</i>.",
+    "stamina-up": "Your <i>stamina</i> has increased by <i>{0} point{s}</i>.",
+    "stamina-down": "You <i>stamina</i> has decreased by <i>{0} point{s}</i>."
   } 
 }

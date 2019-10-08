@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
+using System.Reflection;
 using FightingFantasy.Engine.Core;
 using FightingFantasy.Engine.Models;
 using Newtonsoft.Json;
@@ -51,7 +52,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                     if (_engine.Events.Any())
                     {
-                        _output.Write("\n\n");
+                        _output.Write("\n");
                     }
 
                     var i = 1;
@@ -62,7 +63,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                         i++;
                     }
-                    
+
                     _output.Write("\n");
 
                     _locationChanged = false;
@@ -109,6 +110,32 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         _output.Clear();
                         break;
                     default:
+                        if (input.StartsWith("tp"))
+                        {
+                            var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
+                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            if (gameStateProperty != null)
+                            {
+                                gameStateProperty.Location = int.Parse(input.Substring(3));
+                                _locationChanged = true;
+
+                                var processEventsMethodInfo = _engine.GetType().GetMethod("ProcessLocationEvents", BindingFlags.Instance | BindingFlags.NonPublic);
+                                processEventsMethodInfo?.Invoke(_engine, null);
+
+                            }
+                            break;
+                        }
+                        else if (input.StartsWith("lset"))
+                        {
+                            var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
+                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            if (gameStateProperty != null)
+                            {
+                                gameStateProperty.Protagonist.Luck.Value = int.Parse(input.Substring(5));
+                            }
+                            break;
+                        }
+
                         _output.Write($"\nI'm sorry, I don't know how to <b>{input}</b>.\n\n");
                         break;
                 }

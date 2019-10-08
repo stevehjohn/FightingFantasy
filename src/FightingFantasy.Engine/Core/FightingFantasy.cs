@@ -73,9 +73,14 @@ namespace FightingFantasy.Engine.Core
 
         public void MakeChoice(int index)
         {
-            Events.Clear();
-
             GameState.Location = GetChoices().ToList()[index].Id;
+
+            ProcessLocationEvents();
+        }
+
+        private void ProcessLocationEvents()
+        {
+            Events.Clear();
 
             var location = GameState.Map[GameState.Location];
 
