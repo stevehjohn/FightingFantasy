@@ -127,7 +127,7 @@ namespace FightingFantasy.Engine.Core
             }
         }
 
-        private int ProcessAttributeChange(ProtagonistAttribute attribute, int delta)
+        private static int ProcessAttributeChange(ProtagonistAttribute attribute, int delta)
         {
             var value = attribute.Value;
 

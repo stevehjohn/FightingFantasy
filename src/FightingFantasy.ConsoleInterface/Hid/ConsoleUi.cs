@@ -117,6 +117,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         _locationChanged = true;
                         break;
                     default:
+                        // ncrunch: no coverage start
                         if (input.StartsWith("tp"))
                         {
                             var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
@@ -162,6 +163,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             }
                             break;
                         }
+                        // ncrunch: no coverage end
 
                         _output.Write($"\nI'm sorry, I don't know how to <b>{input}</b>.\n\n");
                         break;
