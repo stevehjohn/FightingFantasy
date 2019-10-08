@@ -15,7 +15,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         private State _state;
         private bool _locationChanged;
-
+        private bool _showOptions;
         public ConsoleUi(IOutput output, IInput input)
         {
             _output = output;
@@ -55,13 +55,30 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         _output.Write("\n");
                     }
 
+                    var items = _engine.GetLocationItems().ToList();
+
+                    if (items.Any())
+                    {
+                        _output.Write("Items in the area:\n\n");
+
+                        foreach (var item in items)
+                        {
+                            _output.Write($"  <u>{item.Description}</u>\n");
+                        }
+
+                        _output.Write("\n");
+                    }
+
                     if (_engine.LocationsVisited == 1)
                     {
                         _output.Write("Dice have been rolled and your initial stats have been determined as...\n");
 
                         _output.Write($"\n<i>Skill</i>: {_engine.Skill}, <i>Stamina</i>: {_engine.Stamina}, <i>Luck</i> {_engine.Luck}\n\n");
                     }
+                }
 
+                if (_locationChanged || _showOptions)
+                {
                     var i = 1;
 
                     foreach (var choice in _engine.GetChoices())
@@ -70,10 +87,20 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                         i++;
                     }
+                    
+                    var items = _engine.GetLocationItems().ToList();
+
+                    foreach (var item in items)
+                    {
+                        _output.Write($"  <b>{i}</b> - Take the {item.Description}.\n");
+
+                        i++;
+                    }
 
                     _output.Write("\n");
 
                     _locationChanged = false;
+                    _showOptions = false;
                 }
 
                 var input = _input.ReadLine().Trim().ToLower();
@@ -92,8 +119,34 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             StartGame(index);
                             continue;
                         case State.Playing:
-                            _engine.MakeChoice(index - 1);
-                            _locationChanged = true;
+                            index--;
+
+                            var choices = _engine.GetChoices().ToList();
+
+                            if (index < choices.Count)
+                            {
+                                _engine.MakeChoice(index);
+
+                                _locationChanged = true;
+                            }
+                            else
+                            {
+                                index -= choices.Count;
+
+                                var items = _engine.GetLocationItems().ToList();
+
+                                if (index < items.Count)
+                                {
+                                    var item = _engine.GetLocationItems().ToList()[index];
+
+                                    _engine.TakeItem(item.Id);
+
+                                    _output.Write($"\nYou take the <u>{item.Description}</u>.\n\n");
+
+                                    _showOptions = true;
+                                }
+                            }
+
                             continue;
                     }
                 }
@@ -123,12 +176,31 @@ namespace FightingFantasy.ConsoleInterface.Hid
                     case "desc":
                         _locationChanged = true;
                         break;
+                    case "items":
+                        var items = _engine.GetInventory().ToList();
+                        if (items.Count == 0)
+                        {
+                            _output.Write("\nYou are not carrying anything.\n\n");
+                        }
+                        else
+                        {
+                            _output.Write("\nYou are carrying:\n\n");
+
+                            foreach (var item in items)
+                            {
+                                _output.Write($"  <u>{item.Description}</u>\n");
+                            }
+
+                            _output.Write("\n");
+                        }
+
+                        break;
                     default:
                         // ncrunch: no coverage start
                         if (input.StartsWith("tp"))
                         {
                             var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
-                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            var gameStateProperty = (GameState)gameStatePropertyInfo?.GetValue(_engine);
                             if (gameStateProperty != null)
                             {
                                 gameStateProperty.Location = int.Parse(input.Substring(3));
@@ -143,7 +215,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         else if (input.StartsWith("lset"))
                         {
                             var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
-                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            var gameStateProperty = (GameState)gameStatePropertyInfo?.GetValue(_engine);
                             if (gameStateProperty != null)
                             {
                                 gameStateProperty.Protagonist.Luck.Value = int.Parse(input.Substring(5));
@@ -153,7 +225,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         else if (input.StartsWith("kset"))
                         {
                             var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
-                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            var gameStateProperty = (GameState)gameStatePropertyInfo?.GetValue(_engine);
                             if (gameStateProperty != null)
                             {
                                 gameStateProperty.Protagonist.Skill.Value = int.Parse(input.Substring(5));
@@ -163,7 +235,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
                         else if (input.StartsWith("tset"))
                         {
                             var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
-                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            var gameStateProperty = (GameState)gameStatePropertyInfo?.GetValue(_engine);
                             if (gameStateProperty != null)
                             {
                                 gameStateProperty.Protagonist.Stamina.Value = int.Parse(input.Substring(5));
@@ -186,6 +258,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
             _output.Write("  <b>New</b>   - Start a new game.\n");
             _output.Write("  <b>Load</b>  - Load a saved game.\n");
             _output.Write("  <b>Stats</b> - Display your statistics.\n");
+            _output.Write("  <b>Items</b> - Display the items in your inventory.\n");
             _output.Write("  <b>Desc</b>  - Describe your current location.\n");
             _output.Write("  <b>Save</b>  - Save the game so you can come back later.\n");
             _output.Write("  <b>Clear</b> - Clear the screen.\n");

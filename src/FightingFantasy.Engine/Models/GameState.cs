@@ -19,6 +19,8 @@ namespace FightingFantasy.Engine.Models
 
         public Dictionary<string, string> Resources { get; set; }
 
+        public List<Item> Items { get; set; }
+
         public int Location
         {
             get => LocationHistory.LastOrDefault();
@@ -28,6 +30,7 @@ namespace FightingFantasy.Engine.Models
         public GameState()
         {
             LocationHistory = new List<int>();
+            Items = new List<Item>();
         }
 
         public static GameState LoadGame(string path)

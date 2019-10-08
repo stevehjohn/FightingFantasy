@@ -10,7 +10,7 @@ namespace FightingFantasy.Engine.Models
 
         public ProtagonistAttribute Luck { get; set; }
 
-        public List<Item> Inventory { get; set; }
+        public List<int> Inventory { get; set; }
 
         public Protagonist()
         {
@@ -18,7 +18,7 @@ namespace FightingFantasy.Engine.Models
             Stamina = new ProtagonistAttribute();
             Luck = new ProtagonistAttribute();
 
-            Inventory = new List<Item>();
+            Inventory = new List<int>();
         }
     }
 }

@@ -271,17 +271,14 @@
     },
     "18": {
       "Id": 18,
-      "Description": "You remove the Axefish from your bag and release it. It quickly grows into a large fish with a heavy beak. It swims towards the bars, attacks them and batters them to pieces. It then swims away, its duty done. As you hurry from the cave, you find an ordinary sword, which you may take if you like. The current carries you downstream along the abyss.",
+      "Description": "You remove the Axefish from your bag and release it. It quickly grows into a large fish with a heavy beak. It swims towards the bars, attacks them and batters them to pieces. It then swims away, its duty done. As you hurry from the cave, the current carries you downstream along the abyss.",
       "Choices": [
-        {
-          "Description": "Take the sword and continue.",
-          "Id": 148
-        },
         {
           "Description": "Continue...",
           "Id": 148
         }
-      ]
+      ],
+      "Items": [ 5 ]
     },
     "19": {
       "Id": 19,
@@ -380,11 +377,15 @@
     },
     {
       "Id": 3,
-      "Description": "Magic sword"
+      "Description": "Magic Sword"
     },
     {
       "Id": 4,
       "Description": "Glowfish"
+    },
+    {
+      "Id": 5,
+      "Description": "Ordinary Sword" 
     }
   ],
   "Resources": {

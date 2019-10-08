@@ -72,7 +72,7 @@ namespace FightingFantasy.Engine.Core
 
             if (defaultChoice != null)
             {
-                if (GameState.Protagonist.Inventory.Any(i => i.Id == defaultChoice.DefaultIfItemIdPossessed))
+                if (GameState.Protagonist.Inventory.Any(i => i == defaultChoice.DefaultIfItemIdPossessed))
                 {
                     return choices.Where(c => c.DefaultIfItemIdPossessed > 0);
                 }
@@ -80,7 +80,7 @@ namespace FightingFantasy.Engine.Core
                 return choices.Where(c => c.DefaultIfItemIdPossessed == 0);
             }
 
-            return choices.Where(c => c.RequiredItemId == 0 || GameState.Protagonist.Inventory.Any(i => i.Id == c.RequiredItemId));
+            return choices.Where(c => c.RequiredItemId == 0 || GameState.Protagonist.Inventory.Any(i => i == c.RequiredItemId));
         }
 
         public void MakeChoice(int index)
@@ -88,6 +88,44 @@ namespace FightingFantasy.Engine.Core
             GameState.Location = GetChoices().ToList()[index].Id;
 
             ProcessLocationEvents();
+        }
+
+        public IEnumerable<Item> GetLocationItems()
+        {
+            var items = new List<Item>();
+
+            var locationItems = GameState.Map[GameState.Location].Items;
+
+            if (locationItems == null)
+            {
+                return Enumerable.Empty<Item>();
+            }
+
+            foreach (var item in locationItems)
+            {
+                items.Add(GameState.Items.First(i => i.Id == item));
+            }
+
+            return items;
+        }
+
+        public IEnumerable<Item> GetInventory()
+        {
+            var items = new List<Item>();
+
+            foreach (var item in GameState.Protagonist.Inventory)
+            {
+                items.Add(GameState.Items.First(i => i.Id == item));
+            }
+
+            return items;
+        }
+
+        public void TakeItem(int itemId)
+        {
+            GameState.Protagonist.Inventory.Add(itemId);
+
+            GameState.Map[GameState.Location].Items.Remove(itemId);
         }
 
         private void ProcessLocationEvents()
