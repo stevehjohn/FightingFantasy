@@ -203,7 +203,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
                 var state = JsonConvert.DeserializeObject<GameState>(json);
 
-                _output.Write($"  <b>{count}</b> - <u>{state.Title}</u>.\n");
+                _output.Write($"  <b>{count}</b> - <i>{state.Title}</i>.\n");
             }
 
             _output.Write("\n");
@@ -226,9 +226,9 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
             _engine.LoadGame(files[index - 1]);
 
-            _output.Write($"<u>{_engine.Title}</u>\n");
+            _output.Write($"<i>{_engine.Title}</i>\n");
 
-            _output.Write($"<u>{new string('-', _engine.Title.Length)}</u>\n");
+            _output.Write($"<i>{new string('-', _engine.Title.Length)}</i>\n");
 
             _locationChanged = true;
 

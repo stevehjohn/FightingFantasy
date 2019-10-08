@@ -90,8 +90,8 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
 
             _consoleUi.Run();
 
-            _output.Verify(o => o.Write("  <b>1</b> - <u>Demons of the Deep</u>.\n"));
-            _output.Verify(o => o.Write("  <b>2</b> - <u>Robot Commando</u>.\n"));
+            _output.Verify(o => o.Write("  <b>1</b> - <i>Demons of the Deep</i>.\n"));
+            _output.Verify(o => o.Write("  <b>2</b> - <i>Robot Commando</i>.\n"));
         }
 
         [TestCase(0, false, null)]
@@ -109,7 +109,7 @@ namespace FightingFantasy.ConsoleInterface.Tests.Hid
 
             if (isValid)
             {
-                _output.Verify(o => o.Write($"<u>{title}</u>\n"));
+                _output.Verify(o => o.Write($"<i>{title}</i>\n"));
             }
             else
             {
