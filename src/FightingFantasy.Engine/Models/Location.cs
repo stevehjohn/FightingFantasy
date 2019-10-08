@@ -26,6 +26,8 @@ namespace FightingFantasy.Engine.Models
 
         public LuckTest LuckTest { get; set; }
 
+        public int Success { get; set; }
+
         public bool CanEscape { get; set; }
 
         public int EscapeLocation { get; set; }
