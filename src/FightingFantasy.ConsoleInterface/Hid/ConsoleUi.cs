@@ -242,6 +242,16 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             }
                             break;
                         }
+                        else if (input.StartsWith("ti"))
+                        {
+                            var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
+                            var gameStateProperty = (GameState)gameStatePropertyInfo?.GetValue(_engine);
+                            if (gameStateProperty != null)
+                            {
+                                gameStateProperty.Protagonist.Inventory.Add(int.Parse(input.Substring(3)));
+                            }
+                            break;
+                        }
                         // ncrunch: no coverage end
 
                         _output.Write($"\nI'm sorry, I don't know how to <b>{input}</b>.\n\n");

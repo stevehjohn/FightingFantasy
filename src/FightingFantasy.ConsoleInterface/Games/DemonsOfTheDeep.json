@@ -282,8 +282,13 @@
     },
     "19": {
       "Id": 19,
-      "Description": "Before your hand reaches the chest, one of the pink tentacles drifts down across your wrist. It burns like fire! What will you do now?",
+      "Description": "Before your hand reaches the chest, one of the pink tentacles drifts down across your wrist. It burns like fire! {msg}What will you do now?",
       "StaminaChange": -1,
+      "StaminaChangeEventCondition": {
+        "MitigatingItemId": 6,
+        "HaveItemMessage": "You possess a <u>Poison Immunity Ring</u>, so come to no harm. ",
+        "DoNotHaveItemMessage": ""
+      }, 
       "Choices": [
         {
           "Description": "Leave the house.",
@@ -385,7 +390,11 @@
     },
     {
       "Id": 5,
-      "Description": "Ordinary Sword" 
+      "Description": "Ordinary Sword"
+    },
+    {
+      "Id": 6,
+      "Description": "Poison Immunity Ring"
     }
   ],
   "Resources": {
