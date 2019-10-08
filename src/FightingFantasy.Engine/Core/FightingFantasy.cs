@@ -87,6 +87,11 @@ namespace FightingFantasy.Engine.Core
         {
             GameState.Location = GetChoices().ToList()[index].Id;
 
+            if (! GameState.Map.ContainsKey(GameState.Location))
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), $"Location id {GameState.Location} does not exist.");
+            }
+
             ProcessLocationEvents();
 
             ProcessLocationLuckOutcome();
