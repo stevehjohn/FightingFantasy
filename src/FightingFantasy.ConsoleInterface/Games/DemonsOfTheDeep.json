@@ -370,7 +370,21 @@
     },
     "25": {
       "Id": 25,
-      "Description": "The Merman looks up in surprise as you dart through his door. When he sees your drawn sword, his eyes open even wider. He throws his Sawfish at you and picks up a long knife - a Knifefish! - from his bench. The Sawfish grows larger and attacks you. You must fight it, and then the Merman. TODO"
+      "Description": "The Merman looks up in surprise as you dart through his door. When he sees your drawn sword, his eyes open even wider. He throws his Sawfish at you and picks up a long knife - a Knifefish! - from his bench. The Sawfish grows larger and attacks you. You must fight it, and then the Merman.",
+      "CanEscape": true,
+      "EscapeLocation": 150,
+      "Antagonists": [
+        {
+          "Description": "Sawfish",
+          "Skill": 8,
+          "Stamina": 10
+        },
+        {
+          "Description": "Merman",
+          "Skill": 10,
+          "Stamina": 5
+        }
+      ]
     },
     "196": {
       "Id": 196,

@@ -25,5 +25,9 @@ namespace FightingFantasy.Engine.Models
         public List<int> Items { get; set; }
 
         public LuckTest LuckTest { get; set; }
+
+        public bool CanEscape { get; set; }
+
+        public int EscapeLocation { get; set; }
     }
 }
