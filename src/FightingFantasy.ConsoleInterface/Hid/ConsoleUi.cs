@@ -142,6 +142,26 @@ namespace FightingFantasy.ConsoleInterface.Hid
                             }
                             break;
                         }
+                        else if (input.StartsWith("kset"))
+                        {
+                            var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
+                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            if (gameStateProperty != null)
+                            {
+                                gameStateProperty.Protagonist.Skill.Value = int.Parse(input.Substring(5));
+                            }
+                            break;
+                        }
+                        else if (input.StartsWith("tset"))
+                        {
+                            var gameStatePropertyInfo = _engine.GetType().GetField("GameState", BindingFlags.Instance | BindingFlags.NonPublic);
+                            var gameStateProperty = (GameState) gameStatePropertyInfo?.GetValue(_engine);
+                            if (gameStateProperty != null)
+                            {
+                                gameStateProperty.Protagonist.Stamina.Value = int.Parse(input.Substring(5));
+                            }
+                            break;
+                        }
 
                         _output.Write($"\nI'm sorry, I don't know how to <b>{input}</b>.\n\n");
                         break;
