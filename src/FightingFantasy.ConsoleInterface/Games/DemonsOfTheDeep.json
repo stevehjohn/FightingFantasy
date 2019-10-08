@@ -220,6 +220,8 @@
     "14": {
       "Id": 14,
       "Description": "You reach into your bag and find the bottle with the envelope. He is amazed, but immediately opens the bottle and reads the message. It is obviously important; he hems and haws, puts it in a pocket of his robe and thanks you gruffily. For the first time, he seems to notice your bedraggled condition. He snaps his fingers and restores your <c>Stamina</c> and <c>Luck</c> to their initial values!",
+      "RestoreStamina": true,
+      "RestoreLuck": true, 
       "Choices": [
         {
           "Description": "Continue...",
@@ -383,5 +385,9 @@
       "Id": 4,
       "Description": "Glowfish"
     }
-  ]
+  ],
+  "Resources": {
+    "luck-up": "Your luck has increased by {0} point{s}.",
+    "luck-down": "You luck has decreased by {0} point{s}."
+  } 
 }
