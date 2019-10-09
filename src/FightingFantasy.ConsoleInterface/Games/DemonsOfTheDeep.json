@@ -477,6 +477,16 @@
           "Description": "Towards a cliff with a dark cave at its base.",
           "Id": 62
         }
+      ]
+    },
+    "33": {
+      "Id": 33,
+      "Description": "You wiped out the whole nest of Bloodworms. Their bodies dissolve into a reddish slime. In their rocky lair you find a clean-picked human skeleton and a mouldering pouch containing 2 Gold Pieces. You head on towards the cathedral, which now seems very close",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 269 
+        }
       ] 
     },
     "183": {

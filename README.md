@@ -12,5 +12,7 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Escape. Location 25.
 - Consistent styling - c for antagonists? i for attributes?
 - End state. See location 27.
+- Pick up items. See location 33.
+- Possesion based automatic moves. Location 34.
 - Lose random stamina points. See location 183.
 - Temporary loss of points. See location 183.
