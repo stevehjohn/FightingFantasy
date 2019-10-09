@@ -1138,6 +1138,271 @@
         }
       ]
     },
+    "81": {
+      "Id": 81,
+      "Description": "You bow politely (no mean feat while you are swimming) and offer the Hag your magical sword, hilt first. 'Oh well,' she mutters, 'anything magical is worth something, I suppose. She waves her hand. TODO.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 162
+        }
+      ]
+    },
+    "82": {
+      "Id": 82,
+      "Description": "You feel a throbbing. The bite was poisonous!",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 250,
+          "DefaultIfItemIdPossessed": 6
+        },
+        {
+          "Description": "Continue...",
+          "Id": 336
+        }
+      ]
+    },
+    "83": {
+      "Id": 83,
+      "Description": "You open the chest. Instantly, effervescent bubbles rise and fill the water around you. Their sparkling invigorates you. As the bubbles subside, you see that the chest also contains a dagger. TODO.",
+      "Choices": [
+        {
+          "Description": "Take the dagger.",
+          "Id": 263
+        },
+        {
+          "Description": "Leave the dagger.",
+          "Id": 381
+        }
+      ]
+    },
+    "84": {
+      "Id": 84,
+      "Description": "The bottle is made of red glass. Inscribed on the outside, in your own language (which the Ghost apparently could not read) are the words 'Healing Potion'. Taking this will restore your stamina to its initial level. You thank the ghost an leave, swimming towards the square stone building you saw earlier. TODO - autopickup",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 159
+        }
+      ]
+    },
+    "85": {
+      "Id": 85,
+      "Description": "Your refusal infuriates the Elemental. 'If you won't give me what I need,' it hisses, 'I'll take it!' It attacks you.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 210
+        }
+      ]
+    },
+    "86": {
+      "Id": 86,
+      "Description": "You have slain the Sea Dragon, a feat worthy of the greatest hero. There is more treasure here than you could spend in a lifetime. Unfortunately, you have no way to carry it with you! You finally settle for 2 Black Pearls (all you can find) and a dozen Gold Pieces, along with one very fine sapphire. Seeing light towards the back if the cavern, you swim in that direction, out of a narrow tunnel and up towards the light. TODO - autopickup",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 202
+        }
+      ]
+    },
+    "87": {
+      "Id": 87,
+      "Description": "You swim towards the huge formation of coral. It seems to take the form of a wall surrounding three sides of a huge rock bowl. You enter through the open side and swim towards the inside of the wall. Then, looking down, you see enormous eyes looking back up at you! Ten huge tentacles unfold and reach out. The creature below you is the legendary Kraken, a monster big enough to sink a ship! Its great beak opens and closes. What will you do?",
+      "Choices": [
+        {
+          "Description": "Swim down and fight the Kraken.",
+          "Id": 253
+        },
+        {
+          "Description": "Try to hide in a niche in the coral wall.",
+          "Id": 99
+        },
+        {
+          "Description": "Turn around and make for open water.",
+          "Id": 309
+        }
+      ]
+    },
+    "88": {
+      "Id": 88,
+      "Description": "The Sawfish is dead, and all the other Toolfish have escaped. You search the room, but find nothing.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 150
+        }
+      ]
+    },
+    "89": {
+      "Id": 89,
+      "Description": "As you swim towards the tower, you are spotted by a creature within. You glimpse a green, bulging-eyed face. 'Not here, land-dweller! Use the front entrance!' It points downward.",
+      "Choices": [
+        {
+          "Description": "Make another choice.",
+          "Id": 103
+        }
+      ]
+    },
+    "90": {
+      "Id": 90,
+      "Description": "TODO"
+    },
+    "91": {
+      "Id": 91,
+      "Description": "You hammer at the bars of the cage, hoping to escape by main force.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 392
+        }
+      ],
+      "LuckTest": {
+        "Lucky": 200,
+        "Unlucky": 392
+      }
+    },
+    "92": {
+      "Id": 92,
+      "Description": "You have dealt with both Giant Crabs. Little fish appear, seemingly from nowhere, to pick at the white crab meat. What will you do now?",
+      "Choices": [
+        {
+          "Description": "Sample the crab meat yourself.",
+          "Id": 400
+        },
+        {
+          "Description": "Investigate the brick building.",
+          "Id": 341
+        },
+        {
+          "Description": "Leave the area.",
+          "Id": 389
+        }
+      ]
+    },
+    "93": {
+      "Id": 93,
+      "Description": "The Grouper mistakes your caution for fear. It rushes you before you can get your sword up. To avoid being swallowed, you kick at its nose, and it bites your leg.",
+      "StaminaChange": -2,
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 119
+        }
+      ]
+    },
+    "94": {
+      "Id": 94,
+      "Description": "You attack the clump of Anemones. Their poisoned tentacles extend hugely and reach out for you, slapping you across your arms and chest. Their touch burns you.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 45,
+          "DefaultIfItemIdPossessed": 6
+        },
+        {
+          "Description": "Continue...",
+          "Id": 314
+        }
+      ]
+    },
+    "95": {
+      "Id": 95,
+      "Description": "He is surprised at your sudden attack, but defends himself, dodging out of reach and waving his wand at you. Your vision blurs and you fall to the ground. You are having trouble breathing. He shakes his head in puzzlement, picks you up and throws you through the bubble into the water. You find you can breathe again. You swim away, dimly realising that something has changed. Indeed it has! You are now a fish - and an ugly one at that. Your adventure is over.",
+      "IsEnd": true
+    },
+    "96": {
+      "Id": 96,
+      "Description": "The tunnel turns sharply upwards. It leads to another huge trapdoor. Without much hope, you brace yourself against a wall and push. To your surprise, the door is counterbalanced and rises easily. You leave and it closes behind you. On top is a huge boulder, yo soon learn that the door does not open from this side. You find yourself on the sea-floor once again, with sunlight visible above. The Glowfish swims away, its work done. Not far from you is a building that looks like a small house. It is deserted and its roof is smashed. Beyond it is a huge, deep abyss.",
+      "Choices": [
+        {
+          "Description": "Investigate the little house.",
+          "Id": 172
+        },
+        {
+          "Description": "Swim down into the abyss.",
+          "Id": 6
+        }
+      ]
+    },
+    "97": {
+      "Id": 97,
+      "Description": "You bend and run your sword between the Clam's shells. It opens, revealing a large Silver Pearl. You take the treasure gleefully and pop it in your bag. But while you are distracted, a huge Sea Spider falls from the ceiling on to your back! It wounds you once before you can defend yourself. You fight the Sea Spider.",
+      "StaminaChange": 2,
+      "CanEscape": true,
+      "EscapeLocation": 222,
+      "Success": 371,
+      "Antagonists": [
+        {
+          "Description": "Sea Spider",
+          "Skill": 7,
+          "Stamina": 10
+        }
+      ]
+    },
+    "98": {
+      "Id": 98,
+      "Description": "You think you can handle a single ugly eel. You slash at it with your sword, and it responds by striking at you with needle-like fangs.",
+      "Success": 131,
+      "Antagonists": [
+        {
+          "Description": "Moray Eel",
+          "Skill": 7,
+          "Stamina": 12
+        }
+      ]
+    },
+    "99": {
+      "Id": 99,
+      "Description": "You dart into a large hole in the coral, just ahead of a reaching tentacle. Exploring your refuge, you find that it does not lead all the way through the coral wall. You may eat provisions now or drink a potion. You are safe for the moment... or are you? The Kraken's huge arms are tearing the coral away from the entrance and probing after you. What will you do now?",
+      "Choices": [
+        {
+          "Description": "Use the ice crystal.",
+          "Id": 193,
+          "RequiredItemId": 14
+        },
+        {
+          "Description": "Use the Potion of Vaporous Essence.",
+          "Id": 278,
+          "RequiredItemId": 16
+        },
+        {
+          "Description": "Use a Toolfish.",
+          "Id": 31
+        },
+        {
+          "Description": "Attack with your sword.",
+          "Id": 253
+        },
+        {
+          "Description": "None of the above.",
+          "Id": 147
+        }
+      ]
+    },
+    "100": {
+      "Id": 100,
+      "Description": "You swim around the ship until you find an anchor-rope, and climb aboard the Troll. The dumbfounded sentries gape at you. As they raise the alarm, you reach into your pouch and pull out the Black Pearls you have gathered. Casting the Pearls to the deck, you cry out the magic word! A cloud of fog appears around the Pearls and solidifies into chalk-white bones. The Pearls have become the eyes of your enchanted Skeletons! How many pearls did you throw down?",
+      "Choices": [
+        {
+          "Description": "Two.",
+          "Id": 313
+        },
+        {
+          "Description": "Four.",
+          "Id": 274
+        },
+        {
+          "Description": "Six.",
+          "Id": 51
+        },
+        {
+          "Description": "Eight or more.",
+          "Id": 236
+        }
+      ] 
+    },
     "183": {
       "Id": 183,
       "Description": "You were off balance from your lunge, and you are drawn directly into the raging whirlpool.",
@@ -1236,6 +1501,10 @@
     {
       "Id": 15,
       "Description": "Dolphin's Name"
+    },
+    {
+      "Id": 16,
+      "Description": "Potion of Vaporous Essence"
     }
   ],
   "Resources": {

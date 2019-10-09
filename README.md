@@ -15,7 +15,7 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - End state. See location 27.
 - Pick up items. See location 33.
 - Possesion based automatic moves. Location 34.
-- Weird luck login in location 39.
+- Weird luck logic in location 39.
 - Visit if not visited. Location 40.
 - Increase initial Skill - 42.
 - Knowledge - see Summon Sea Dragon in 47. Might be able to just make knowledge an item. See Item 9.
@@ -29,4 +29,10 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Temporary loss of points. See location 183.
 - Maybe only make a choice available if user has an item, but don't make it default. This way, player can lie. See 67.
 - Die if stamina == 0.
-
+- Change IDs to strings? Then can have 81, 81a (restore luck) ordered to leave, 82a (restore stamina) ordered to leave, 162. This might work for the luck logic in 39 also.
+- Auto take item when selecting a choice. 83.
+- Auto obtain item when at a location. 84. 86.
+- Use item at any time (except in battle) 84.
+- Dice logic on 90.
+- Item quantity logic. 100.
+- Search for any TODOs...
