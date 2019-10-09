@@ -143,6 +143,7 @@ namespace FightingFantasy.Engine.Core
 
             if (location.StaminaChange != 0)
             {
+                // TODO: Refactor this mess.
                 if (location.StaminaChangeEventCondition != null)
                 {
                     if (GameState.Protagonist.Inventory.Any(i => i == location.StaminaChangeEventCondition.MitigatingItemId))
@@ -159,6 +160,15 @@ namespace FightingFantasy.Engine.Core
                         {
                             Events.Add(GameState.Resources[delta > 0 ? "stamina-up" : "stamina-down"].Replace("{0}", Math.Abs(delta).ToString()).Pluralise(delta));
                         }
+                    }
+                }
+                else
+                {
+                    var delta = ProcessAttributeChange(GameState.Protagonist.Stamina, location.StaminaChange);
+
+                    if (delta != 0)
+                    {
+                        Events.Add(GameState.Resources[delta > 0 ? "stamina-up" : "stamina-down"].Replace("{0}", Math.Abs(delta).ToString()).Pluralise(delta));
                     }
                 }
             }

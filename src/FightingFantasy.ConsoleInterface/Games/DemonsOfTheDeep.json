@@ -562,7 +562,13 @@
     },
     "39": {
       "Id": 39,
-      "Description": "The statue curses you for a coward - then it pulls its own head off and throws it at you!"
+      "Description": "The statue curses you for a coward - then it pulls its own head off and throws it at you!",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id":  257 
+        }
+      ] 
     },
     "40": {
       "Id": 40,
@@ -574,9 +580,153 @@
         },
         {
           "Description": "Leave.",
-          "Id": 222 
+          "Id": 222
         }
       ]
+    },
+    "41": {
+      "Id": 41,
+      "Description": "You dive through the door and swim furiously to escape the slimy creature. Ahead of you is the blue glow you saw earlier.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 251
+        }
+      ]
+    },
+    "42": {
+      "Id": 42,
+      "Description": "You leave the Elemental's chamber and squeeze into the narrow coral passage. You are getting rather tired of coral cuts by now. Sure enough, you are injured again.",
+      "StaminaChange": -1,
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 197
+        }
+      ]
+    },
+    "43": {
+      "Id": 43,
+      "Description": "You follow the winding tunnel as it changes from coral to rock. Ahead of you, a dim glow slowly becomes dazzling as you swim closer. Rounding a ben, you confront a huge <c>Sea Dragon</c>, curled up on a gleaming pile of treasure. It fixes you with an eye as big as a cannon-ball. What will you do?",
+      "Choices": [
+        {
+          "Description": "Flee.",
+          "Id": 231
+        },
+        {
+          "Description": "Attack",
+          "Id": 28
+        },
+        {
+          "Description": "Tell it the story of your adventure.",
+          "Id": 7
+        }
+      ]
+    },
+    "44": {
+      "Id": 44,
+      "Description": "It waves its hand, wafting a shower of glittering motes towards you. You feel a tingling. Before you can thank the Water Sprite, it vanishes. You leave the reef.",
+      "LuckChange": 4,
+      "Choices": [
+        {
+          "Description": "Swim towards the larger coral formation",
+          "Id": 87
+        },
+        {
+          "Description": "Head towards an area of rocks and sunken timbers",
+          "Id": 111
+        }
+      ]
+    },
+    "45": {
+      "Id": 45,
+      "Description": "Your ring will subtract 3 from each Attack Roll the Anemones make. TODO",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 314
+        }
+      ]
+    },
+    "46": {
+      "Id": 46,
+      "Description": "The fight ends; you may eat Provisions, if you need to regain strength. <c>Cyrano</c> congratulates you on your performance: 'Of course you did not win! Don't feel bad. You could not be expected to win against the great <c>Cyrano</c>, but you did well.' Cyrano stamps his foot again, and you find yourself back in the open ocean, in the middle of a patch of broken timbers.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 111
+        }
+      ]
+    },
+    "47": {
+      "Id": 47,
+      "Description": "Hidden beneath the hull of the pirate ship, you plan your final attack. You know that your fate hinges on the decisions you are about to make. What will you do to defeat the pirates?",
+      "Choices": [
+        {
+          "Description": "Attack them boldly with your sword.",
+          "Id": 116
+        },
+        {
+          "Description": "Use the <u>Black Pearls</u> you have gathered.",
+          "Id": 358
+        },
+        {
+          "Description": "Use a magic <u>Toolfish</u>.",
+          "Id": 188,
+          "RequiredItemId": 8
+        },
+        {
+          "Description": "Summon the <c>Sea Dragon</c>.",
+          "Id": 243,
+          "RequiredItemId": 9
+        }
+      ]
+    },
+    "48": {
+      "Id": 48,
+      "Description": "The bottle is made of blue glass and is heavily sealed. Through the side you can see that it contains an envelope, marked 'Greylock'. What will you do?",
+      "Choices": [
+        {
+          "Description": "Open the bottle and read the letter.",
+          "Id": 139
+        },
+        {
+          "Description": "Discard the bottle.",
+          "Id": 397
+        },
+        {
+          "Description": "Keep the bottle, unopened.",
+          "Id": 344
+        }
+      ]
+    },
+    "49": {
+      "Id": 49,
+      "Description": "The tunnel continues downward for a while and then divides again. The <u>Glowfish<u> swims away, but you can see faint light from both tunnels ahead.",
+      "Choices": [
+        {
+          "Description": "Go to the right",
+          "Id": 385
+        },
+        {
+          "Description": "Go to the left",
+          "Id": 245 
+        }
+      ]
+    },
+    "50": {
+      "Id": 50,
+      "Description": "The Dolphin swims curiously around you, squeaking. It seems to be very exited about something. It tries to push you to the surface, but you resit, and it swims away, as though abashed. The it returns and circles you, before darting away again. You look in the direction it is swimming and see a huge sand-coloured <c>Shark</c> closing in rapidly! The Dolphin arrows towards it.",
+      "Choices": [
+        {
+          "Description": "Join the Dolphin in fighting the <c>Shark</c>.",
+          "Id": 218
+        },
+        {
+          "Description": "Retire from the scene and let them fight it out.",
+          "Id": 72 
+        }
+      ] 
     },
     "183": {
       "Id": 183,
@@ -643,7 +793,15 @@
     },
     {
       "Id": 7,
-      "Description": "Jade Crown" 
+      "Description": "Jade Crown"
+    },
+    {
+      "Id": 8,
+      "Description": "Toolfish"
+    },
+    {
+      "Id": 9,
+      "Description": "Sea Dragon Summoning Spell" 
     }
   ],
   "Resources": {
