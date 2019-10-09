@@ -443,6 +443,42 @@
         "Unlucky": 183
       }
     },
+    "31": {
+      "Id": 31,
+      "Description": "Which one will you use?",
+      "Choices": [
+        {
+          "Description": "The Axefish.",
+          "Id": 214
+        },
+        {
+          "Description": "The Sawfish.",
+          "Id": 342
+        },
+        {
+          "Description": "The Borerfish.",
+          "Id": 179
+        }
+      ]
+    },
+    "32": {
+      "Id": 32,
+      "Description": "You flee from the huge creatures. To your relief, there is no pursuit. Which way will you go?",
+      "Choices": [
+        {
+          "Description": "Towards a distant sunken cathedral.",
+          "Id": 269
+        },
+        {
+          "Description": "Towards a gleaming coral reef.",
+          "Id": 160
+        },
+        {
+          "Description": "Towards a cliff with a dark cave at its base.",
+          "Id": 62
+        }
+      ] 
+    },
     "183": {
       "Id": 183,
       "Description": "You were off balance from your lunge, and you are drawn directly into the raging whirlpool.",
