@@ -17,6 +17,7 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Weird luck login in location 39.
 - Visit if not visited. Location 40.
 - Knowledge - see Summon Sea Dragon in 47. Might be able to just make knowledge an item. See Item 9.
+- Automatically pick up items. Location 54, black pearls. Also, take item when making a choice.
 - Lose random stamina points. See location 183.
 - Temporary loss of points. See location 183.
 - Die if stamina == 0.

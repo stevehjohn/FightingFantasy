@@ -768,7 +768,111 @@
         },
         {
           "Description": "Swim out over the city.",
-          "Id": 64 
+          "Id": 64
+        }
+      ]
+    },
+    "54": {
+      "Id": 54,
+      "Description": "You smash the Bone Demon's skeletal arms, and its one remaining weapon falls to the floor. With a powerful backhand blow, you crush its skull. The light in its eyes dims as it sinks to the floor. You reach for its crown, but it turns to muck in your hands, leaving only the 2 Black Pearls. You pocket them and search the room. The spear is too long to carry, and the axe is much too heavy, but the sword looks as though it might be useful. Furthermore, it is shimmering with a red glow - obviously magical.",
+      "Choices": [
+        {
+          "Description": "Take the <i>Magic Sword.<i>",
+          "Id": 330
+        },
+        {
+          "Description": "Continue... ",
+          "Id": 255
+        }
+      ]
+    },
+    "55": {
+      "Id": 55,
+      "Description": "You release the Borefish and it grows into a stout creature with a corkscrew nose. It swims up to the <i>Troll's<i> hull and begins to drill one hole after another. No immediate effect is visible, but within ten minutes the ship can be seen to be settling! From a distance you watch as the pirate vessel founders and sinks. A few pirates thrash their way to the shore, but most go down with the ship. Darkness is falling as you swim down to the sunken <i>Troll</i> to look it over.",
+      "Choices": [
+        {
+          "Description": "Untie one of the <i>Troll's</i> lifeboats and float up with it.",
+          "Id": 238
+        },
+        {
+          "Description": "Head for the treasure-hold.",
+          "Id": 369
+        }
+      ]
+    },
+    "56": {
+      "Id": 56,
+      "Description": "The loathsome Sea Hag lies dead at your feet. Around her neck is a necklace. Searching the room, you find 3 Black Pearls. At the back of the room is a deep fissure, and on the other side of the fissure you can see a huge brass-bound chest.",
+      "Choices": [
+        {
+          "Description": "Examine the chest.",
+          "Id": 388
+        },
+        {
+          "Description": "Leave.",
+          "Id": 162
+        }
+      ]
+    },
+    "57": {
+      "Id": 57,
+      "Description": "The Merman is surprised to see a land-dweller in his workshop, but he is friendly. When he hears your story, he is sympathetic. 'I'd like to help you if I can.' he says. 'If you have anything to pay, I will sell you some of my spare Toolfish. They are magical, and may be of use.' What will you do?",
+      "Choices": [
+        {
+          "Description": "Offer Gold.",
+          "Id": 132
+        },
+        {
+          "Description": "Offer a Black Pearl.",
+          "Id": 373
+        },
+        {
+          "Description": "Offer the harpoon.",
+          "Id": 76,
+          "RequiredItemId": 11
+        },
+        {
+          "Description": "Decline, thank him and leave.",
+          "Id": 150
+        },
+        {
+          "Description": "Attack him.",
+          "Id": 329
+        }
+      ]
+    },
+    "58": {
+      "Id": 58,
+      "Description": "You flee the wrath of the angry Water Elemental, propelled by a sudden angry current from its upraised hand. The sharp coral cuts you cruelly as you struggle through the narrow tunnel.",
+      "StaminaChange": -2,
+      "Choices": [
+        {
+          "Description": "Go downstream.",
+          "Id": 221
+        },
+        {
+          "Description": "Try to get through the trapdoor.",
+          "Id": 365
+        }
+      ]
+    },
+    "59": {
+      "Id": 59,
+      "Description": "As the trident streaks through a deep, cold chasm, you manage to pull your hand free. The trident continues on its path and vanishes.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 6
+        }
+      ]
+    },
+    "60": {
+      "Id": 60,
+      "Description": "You gather your courage and kiss the fishy princess. It works! Her eyes open. She looks at her rescuer... and screams with terror at your human face. When she realises what has happened, however, she apologises. To show her gratitude, she takes a ring from her own hand and gives it to you. It is magical, she tells you, and has great virtue against poisons. You thank her and take your leave of the admiring Deep Ones.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 347 
         }
       ] 
     },
@@ -845,7 +949,15 @@
     },
     {
       "Id": 9,
-      "Description": "Sea Dragon Summoning Spell" 
+      "Description": "Sea Dragon Summoning Spell"
+    },
+    {
+      "Id": 10,
+      "Description": "Magic Sword"
+    },
+    {
+      "Id": 11,
+      "Description": "Harpoon" 
     }
   ],
   "Resources": {
