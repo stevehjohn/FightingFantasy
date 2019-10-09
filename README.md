@@ -11,7 +11,6 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Test coverage.
 - Mechanism to choose what inventory item to hand over. Location 22.
 - Escape. Location 25.
-- Consistent styling - c for antagonists? i for attributes? - Maybe change tags from style elements to markup elements. E.g. ant, item, attr...
 - End state. See location 27.
 - Pick up items. See location 33.
 - Possesion based automatic moves. Location 34.
