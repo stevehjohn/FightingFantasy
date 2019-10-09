@@ -9,7 +9,7 @@ namespace FightingFantasy.Engine.Tests.Models
         [Test]
         public void LoadGame_can_deserialise_GameState_JSON()
         {
-            var gameState = GameState.LoadGame(".\\TestFiles\\GameState.json");
+            var gameState = GameState.LoadGame("TestFiles\\GameState.json");
 
             Assert.That(gameState.Title, Is.EqualTo("Demons of the Deep"));
             Assert.That(gameState.Protagonist, Is.Null);
@@ -45,7 +45,7 @@ namespace FightingFantasy.Engine.Tests.Models
 
         public void LoadGame_can_deserialise_SavedGameState_JSON()
         {
-            var gameState = GameState.LoadGame(".\\TestFiles\\SavedGame.json");
+            var gameState = GameState.LoadGame("TestFiles\\SavedGame.json");
 
             Assert.That(gameState.Title, Is.EqualTo("Demons of the Deep"));
             Assert.That(gameState.Protagonist, Is.Not.Null);

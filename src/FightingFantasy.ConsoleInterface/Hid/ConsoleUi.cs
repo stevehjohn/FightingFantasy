@@ -285,7 +285,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
         {
             _output.Write("\nPlease enter the number of the game you'd like to start:\n\n");
 
-            var files = Directory.EnumerateFiles(".\\Games").OrderBy(s => s).ToList();
+            var files = Directory.EnumerateFiles("Games").OrderBy(s => s).ToList();
 
             var count = 0;
 
@@ -307,7 +307,7 @@ namespace FightingFantasy.ConsoleInterface.Hid
 
         private void StartGame(int index)
         {
-            var files = Directory.EnumerateFiles(".\\Games").OrderBy(s => s).ToList();
+            var files = Directory.EnumerateFiles("Games").OrderBy(s => s).ToList();
 
             if (index < 1 || index > files.Count)
             {

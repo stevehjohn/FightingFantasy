@@ -18,7 +18,7 @@ namespace FightingFantasy.ConsoleInterface.Infrastructure
 
         private static AppSettings GetAppSettings()
         {
-            var json = File.ReadAllText(".\\app-settings.json");
+            var json = File.ReadAllText("app-settings.json");
 
             return JsonConvert.DeserializeObject<AppSettings>(json);
         }
