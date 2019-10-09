@@ -21,3 +21,13 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - Lose random stamina points. See location 183.
 - Temporary loss of points. See location 183.
 - Die if stamina == 0.
+
+## Suggested Markup
+
+loc - Location
+ves - Vessel
+ves-a - Antagonist Vessel
+wep - Weapon
+ant - Antagonist
+prov - Provision
+neut - Neutral Creature
