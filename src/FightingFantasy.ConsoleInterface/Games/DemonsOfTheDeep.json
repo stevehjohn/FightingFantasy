@@ -502,14 +502,81 @@
           "Id": 208
         },
         {
-          "Description": "Offer him a jade crown (if you have one).",
-          "Id": 265
+          "Description": "Offer him a jade crown.",
+          "Id": 265,
+          "RequiredItemId": 7
         },
         {
           "Description": "Ask if you can do him a service.",
           "Id": 4
         }
-      ] 
+      ]
+    },
+    "36": {
+      "Id": 36,
+      "Description": "You answer the Dragon, and thank him in return. 'Think nothing of it!' he says, 'I am grateful to <i>you</i>, for the gold and for the <i>snack</i>!' It lunges towards you, jaws agape. You must fight the treacherous Sea Dragon.",
+      "Success": 277,
+      "Antagonists": [
+        {
+          "Description": "Sea Dragon",
+          "Skill": 10,
+          "Stamina": 24
+        }
+      ]
+    },
+    "37": {
+      "Id": 37,
+      "Description": "As you watch, a school of beautiful Angelfish swims into the hall. As if in response, the next window you look at depicts more Angelfish. You laugh at the thought of 'angel' fish in a cathedral, and wonder where the <i>devil</i>fish is. Sure enough, the next window shows a huge <c>Devilfish</c>, so realistic it appears to be swimming towards you. In fact, it is! What will you do?",
+      "Choices": [
+        {
+          "Description": "Attack it.",
+          "Id": 294
+        },
+        {
+          "Description": "Ignore it.",
+          "Id": 80
+        },
+        {
+          "Description": "Flee.",
+          "Id": 117 
+        }
+      ]
+    },
+    "38": {
+      "Id": 38,
+      "Description": "You see a golden-yellow shape ahead - a large fish of some kind. It opens its mouth, and again you hear a bubbling roar. You draw your sword as it comes closer. Then it sees you. Fins around its neck stand up in a great mane; it yawns, showing sharp teeth, and swims towards you. It is a <c>Lionfish</c>! What will you do?",
+      "Choices": [
+        {
+          "Description": "Fight it with your sword.",
+          "Id": 73
+        },
+        {
+          "Description": "Flee back down the path.",
+          "Id": 396
+        },
+        {
+          "Description": "Swim to the top of one of the seaweed trees.",
+          "Id": 293
+        }
+      ]
+    },
+    "39": {
+      "Id": 39,
+      "Description": "The statue curses you for a coward - then it pulls its own head off and throws it at you!"
+    },
+    "40": {
+      "Id": 40,
+      "Description": "You make your way forward to the captain's cabin. In a water-soaked desk you find the ship's papers. Most of them are totally ruined, but one set of charts was waterproof. You study them, and your seafaring experience quickly lets you identify your approximate position. To your surprise, several islands are shown near by, where you had not know any existed. They are marked with names like Tarfeather Island, Gorblimey Rocks, Fish Island, Kestrel Island... and a skull and crossbones. You find nothing else in the cabin. The maps are too big to carry, so you leave them behind.",
+      "Choices": [
+        {
+          "Description": "Visit the treasure-hold.",
+          "Id": 192
+        },
+        {
+          "Description": "Leave.",
+          "Id": 222 
+        }
+      ]
     },
     "183": {
       "Id": 183,
@@ -573,6 +640,10 @@
     {
       "Id": 6,
       "Description": "Poison Immunity Ring"
+    },
+    {
+      "Id": 7,
+      "Description": "Jade Crown" 
     }
   ],
   "Resources": {
