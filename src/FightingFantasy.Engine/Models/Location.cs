@@ -18,6 +18,8 @@ namespace FightingFantasy.Engine.Models
         
         public int SkillChange { get; set; }
 
+        public int InitialSkillChange { get; set; }
+
         public EventCondition StaminaChangeEventCondition { get; set; }
 
         public bool RestoreStamina { get; set; }
@@ -35,5 +37,7 @@ namespace FightingFantasy.Engine.Models
         public int EscapeLocation { get; set; }
 
         public bool IsEnd { get; set; }
+
+        public List<Antagonist> Antagonists { get; set; }
     }
 }
