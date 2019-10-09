@@ -724,7 +724,51 @@
         },
         {
           "Description": "Retire from the scene and let them fight it out.",
-          "Id": 72 
+          "Id": 72
+        }
+      ]
+    },
+    "51": {
+      "Id": 51,
+      "Description": "Your spell produced three Skeletons. Shouting in fear, most of the pirates dive overboard and flee. A few show fight, but you and the Skeletons are an even match for them. The last Skeleton falls to the sword of <c>Captain Bloodaxe</c>, who is the only pirate left on the ship. You must fight him yourself.",
+      "Success": 189,
+      "Antagonists": [
+        {
+          "Description": "Captain Bloodaxe",
+          "Skill": 11,
+          "Stamina": 12
+        }
+      ]
+    },
+    "52": {
+      "Id": 52,
+      "Description": "Thanks to the warning from the Glowfish, you have time to dodge the monster's first rush. It turns about and comes for you again, arms outstretched.",
+      "Choices": [
+        {
+          "Description": "Attack it.",
+          "Id": 383
+        },
+        {
+          "Description": "Try to out-swim it.",
+          "Id": 129
+        }
+      ]
+    },
+    "53": {
+      "Id": 53,
+      "Description": "Below you and to one side are more buildings: evidently the city of Atlantis was very extensive! In front of you is the face of the cliff from which you emerged, pock-marked with tiny caverns and festooned with corals, sea anemones and plants. You can:",
+      "Choices": [
+        {
+          "Description": "Examinw the cliff face more closely.",
+          "Id": 320
+        },
+        {
+          "Description": "Swim up towards the top of the cliff.",
+          "Id": 260
+        },
+        {
+          "Description": "Swim out over the city.",
+          "Id": 64 
         }
       ] 
     },
