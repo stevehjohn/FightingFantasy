@@ -14,5 +14,6 @@ A nostalgic tribute to the old Fighting Fantasy books.
 - End state. See location 27.
 - Pick up items. See location 33.
 - Possesion based automatic moves. Location 34.
+- Inventory based options, see 35.
 - Lose random stamina points. See location 183.
 - Temporary loss of points. See location 183.

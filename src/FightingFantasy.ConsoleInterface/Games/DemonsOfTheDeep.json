@@ -485,7 +485,29 @@
       "Choices": [
         {
           "Description": "Continue...",
-          "Id": 269 
+          "Id": 269
+        }
+      ]
+    },
+    "34": {
+      "Id": 34,
+      "Description": "TODO"
+    },
+    "35": {
+      "Id": 35,
+      "Description": "As you approach, you see that these are not true humans, but <c>Deep Ones</c>. Their skin is green and warty, their eyes huge and frog-like. They have gills and huge claws. They wear jewelled armour. They tell you that King Seamoss is always interested in curiosities like yourself, and conduct you inside. Within the great council-hall, richly dressed courtiers meet you and conduct you to the throne on which the fat fish-king sits. His eyes bulge, and he wheezes when he speaks, but his questions are keen. What will you do?",
+      "Choices": [
+        {
+          "Description": "Tell your story and ask for help.",
+          "Id": 208
+        },
+        {
+          "Description": "Offer him a jade crown (if you have one).",
+          "Id": 265
+        },
+        {
+          "Description": "Ask if you can do him a service.",
+          "Id": 4
         }
       ] 
     },
