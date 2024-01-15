@@ -277,7 +277,9 @@
           "Id": 148
         }
       ],
-      "Items": [ 5 ]
+      "Items": [
+        5
+      ]
     },
     "19": {
       "Id": 19,
@@ -1401,7 +1403,17 @@
           "Description": "Eight or more.",
           "Id": 236
         }
-      ] 
+      ]
+    },
+    "173": {
+      "Id": 173,
+      "Description": "Curious about your new surroundings, you circle the courtyard. You find that swimming is now very natural to you.",
+      "Choices": [
+        {
+          "Description": "Continue...",
+          "Id": 16
+        }
+      ]
     },
     "183": {
       "Id": 183,
